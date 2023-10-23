@@ -10,45 +10,45 @@
     integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.7.1.min.js"
     integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="./css/product.css">
 <style>
-  
+
 </style>
 
 <body>
     <div class="navDiv">
 
         <nav class="navbar navbar-expand  ">
-           
-     <div class="container" id="insideDiv">
 
-            <div class="title">
-                <img src="./image/logos.png" class=" w-25 object-fit-contain my-2" alt="">
-           
+            <div class="container" id="insideDiv">
+
+                <div class="title">
+                    <img src="./image/logos.png" class=" w-25 object-fit-contain my-2" alt="">
+
+                </div>
+                <div class="collapse navbar-collapse justify-content-center">
+                    <ul class="navbar-nav " id="head_ul">
+                        <li class="nav-item me-1 my-3" id="item_li">
+                            <a href="index.html" class="nav-link">Home</a>
+
+                        </li>
+                        <li class="nav-item me-1 my-3">
+                            <a href="About.html" class="nav-link">About Us</a>
+                        </li>
+                        <li class="nav-item me-1  my-3">
+                            <a href="contact.html" class="nav-link">Contact</a>
+                        </li>
+                        <li class="nav-item me-1  my-3">
+                            <a href="cartPage.html" class="nav-link">Product</a>
+                        </li>
+                    </ul>
+
+                </div>
+                <div class="menu me-2">
+                    <span class="fa fa-bars ms-auto  me-3 " id="icon"></span>
+                </div>
             </div>
-            <div class="collapse navbar-collapse justify-content-center">
-                <ul class="navbar-nav " id="head_ul">
-                    <li class="nav-item me-1 my-3" id="item_li">
-                        <a href="index.html" class="nav-link">Home</a>
-                        
-                    </li>
-                    <li class="nav-item me-1 my-3">
-                        <a href="About.html" class="nav-link">About Us</a>
-                    </li>
-                    <li class="nav-item me-1  my-3">
-                        <a href="contact.html" class="nav-link">Contact</a>
-                    </li>
-                    <li class="nav-item me-1  my-3">
-                        <a href="cartPage.html" class="nav-link">Product</a>
-                    </li>
-                </ul>
-                
-            </div>
-            <div class="menu me-2">
-                <span class="fa fa-bars ms-auto  me-3 " id="icon"></span>
-            </div> 
-        </div>
         </nav>
     </div>
 
@@ -57,14 +57,15 @@
     <h1 class=" text-center text-dark text-uppercase">Products</h1>
 
     <div id="inputSearch" class="d-flex justify-content-center">
-        
-        <input type="search" name="searchProduct" id="searchProductData"  class="text-center" placeholder="Search your product.. ">
-        
+
+        <input type="search" name="searchProduct" id="searchProductData" class="text-center"
+            placeholder="Search your product.. ">
+
         <button id="searchBtn">Search</button>
-       
-       <div class="span">
-        <span id="errorSpan" class="span"></span>
-       </div>
+
+        <div class="span">
+            <span id="errorSpan" class="span"></span>
+        </div>
     </div>
 
     <!-- <div class="ms-5 " id="allButton">
@@ -75,25 +76,36 @@
     </div> -->
     <div class="container">
         <div class="col">
-            <span class="cartBt" id="cartBt"><i class="fa fa-shopping-cart fs-5" style="color: rgb(190, 48, 186);"></i></span>
+            <span class="cartBt" id="cartBt">
+                <i class="fa fa-filter fs-5" style="color: rgb(37, 30, 37);"></i>
+            </span>
         </div>
-        
+
         <hr>
 
     </div>
     <div class="container">
-        <div id="productList">
+        <div class="row">
+            <div class="col-4 bg-dark" id="filter-Div">
+                sc
+            </div>
+            <div class="col-12" id="productList">
+
+            </div>
         </div>
-        
+
+
     </div>
-    <div class="maincart" style="position: absolute; top:100px; background-color: rgb(61, 237, 178); max-width: 30%; display: none;">
+    <!-- <div class="maincart" style="position: absolute; top:100px; background-color: rgb(61, 237, 178); max-width: 30%; display: none;">
         <div class="slideCart">
             <h4>Cart Title</h4>
         </div>
-    </div>
-   
+    </div> -->
+
 
 </body>
 <script type="text/javascript" src="./Js/cartPage.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
 
 </html>
