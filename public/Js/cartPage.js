@@ -1,3 +1,5 @@
+
+
 const productData = [
 
     {
@@ -173,11 +175,11 @@ function data() {
 
         var buttonDiv = document.createElement('div');
         buttonDiv.classList.add('buttonDivs')
-        buttonDiv.innerHTML=`<button class="btn btn-primary w-100 " id="ViewBtn">View</button>`
+        buttonDiv.innerHTML = `<button class="button btn btn-primary w-100 " id="ViewBtn">View</button>`
         // buttonDiv.setAttribute('id', 'buttonss')
         newDiv.appendChild(buttonDiv);
-       
-       
+
+
         // error   
         //Uncaught TyperError: failed to execute 'appenchild' on node :parameter 1 is not  of type 'node';
         // var viewBtn = document.createElement('button');
@@ -266,16 +268,22 @@ function Dates() {
     console.log("date" + ":" + (cData) + " month" + ":" + cMon)
 }
 
-    $(document).ready(function(){
-        $('#filter-Div').click((event)=>{   
-          $(event).slideToggle();
+// $(document).ready(function () {
+//     $('#filter-Div').click((event) => {
+//         $(event).slideToggle();
+//     })
+// })
+
+
+let viewButton = document.querySelectorAll('#ViewBtn');
+        viewButton.forEach((item,index)=>{
+            item.addEventListener("click",(event)=>{
+            
+            alert("helloc index"+":"+ index)
         })
     })
-
-
-document.getElementById('ViewBtn').addEventListener("mouseover",(event)=>{
-            alert("hello")
-})
-
+            
+        
+        
 
 

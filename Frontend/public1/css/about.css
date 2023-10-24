@@ -1,0 +1,123 @@
+#contactList {
+    list-style: none;
+}
+
+#head_nav {
+    
+    
+
+    background-image: linear-gradient(#987899, #232455);
+}
+ul:first-child{
+text-transform: uppercase;
+font-weight: bold;
+font-size: smaller;
+
+}
+a:hover {
+    border-radius: 3px;
+    background-color: white;
+
+}
+nav .menu{
+    display: none;
+    cursor: pointer;
+}
+
+#footerDown {
+    background-image: dark
+}
+#footerDown img{
+    max-width: 100px;
+   animation: rotate 4s infinite;
+}
+@keyframes rotate {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+    
+}
+
+#footerDown img {
+    transform: rotate(360deg);
+}
+#hiddenFooter {
+    position: fixed;
+    width: 100vw;
+    display: none;
+    background-image: url("image/darkFooter.jpg");
+}
+#xFont{
+   
+   position: absolute; 
+    left: 97%; 
+    top : 10px;
+    color: white;
+    
+   }
+   #xFont:hover{
+       color: red;
+  
+   }
+  nav img{
+    max-width: 200px;
+    box-shadow: 2px 4px 5px #2b252c;
+    border-radius: 4px;
+   }
+  nav .user{
+    display: inline-flex;
+  }
+ 
+
+
+
+ @media screen and (min-width:400px) and (max-width:720px){
+   
+    nav .user{
+        display: none;
+    }
+   
+
+    nav .menu{
+        padding: 20px;
+        display: block;
+        position: absolute;
+        top: 10%;
+        right: 1px;
+     
+
+    }
+    nav .title{
+      max-width: 150px;
+      position:absolute;
+      top: 10%;
+    }
+    #insideDiv ul{
+        position: relative;
+        margin-top: 60px;
+        display: block;
+        text-align: center;
+        padding: 10px;
+     
+
+    }
+    nav li{
+        display: none;
+      
+    }
+
+
+    #footerDown img{
+        position: relative;
+       top: 20px;
+       left: calc(100% - 60%);
+       width: 70px; 
+    }
+    .shownav{
+        display: block;
+    }
+    
+ }

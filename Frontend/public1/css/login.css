@@ -1,0 +1,212 @@
+* {
+    box-sizing: border-box;
+
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    place-content: center;
+   
+    /* background-color: rgb(97, 70, 70); */
+    /* background-image: url("/public/image/fixedFooterimage.webp"); */
+    background:linear-gradient(#12436b,  #50bfc5)
+   
+    
+  
+}
+
+
+
+#formLogin > #loginButton {
+    border-radius: 10px;
+
+}
+
+#leftColumn img {
+    max-width: 25%;
+    background-color: aliceblue;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+#formLogin > h2 {
+    text-align: center;
+  
+}
+
+
+
+
+.form-group > label {
+    font: 1em sans-serif;
+}
+
+
+.form-group.success input{
+
+
+    border: 3px rgb(150, 218, 48) solid;
+
+}
+
+.form-group.error input {
+
+
+    border: red 2px solid;
+    border-radius: 5px;
+}
+.form-group > input{
+    border: #657dad 2px solid;
+}
+
+
+
+input::placeholder {
+    color: antiquewhite;
+}
+
+
+/*  //////////////////////////////////////////*/
+#loginSign{
+    width: 50%;
+    background-image: linear-gradient(#183bc7, #12436b,#50bfc5);
+    justify-content: center;
+    border-radius: 20px;
+    box-shadow: #ad657c;
+}
+#leftColumn{
+    display: grid;
+  align-items: center;
+
+}
+ #rightColumn {
+   border-radius: 20px;
+   border-bottom-left-radius: 0;
+   border-top-left-radius: 0;
+}
+
+#formLogin {
+    display: grid;
+    padding: 20px;
+    background-color:rgb(255, 255, 255);
+    /* border-radius: 100px; */
+    /* border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-left: #bac3d5 2px solid;
+    border-right: #bac3d5 2px solid; */
+   
+    /* background-image: linear-gradient(#8b708b, #414275); */
+    /* background:url(/images/iphone\ 14\ pro.jpg) ; */
+    
+    background-repeat: no-repeat;
+    
+   
+
+}
+
+#signup {
+    border-radius: 10px;
+    padding: 5px 15px;
+    text-decoration: none;
+    color: rgb(105, 83, 83);
+    border: rgb(107, 87, 87) 2px solid;
+}
+
+#signup:active {
+    background-color: rgb(15, 14, 14);
+}
+
+.form-group.error small{
+  
+    color: red;
+    position: relative;
+    
+    
+
+}
+
+@media  (min-width:400px) and (max-width:720px) {
+    #loginSign{
+        width: 70%;
+        background-image: linear-gradient(#183bc7, #12436b,#50bfc5);
+        justify-content: center;
+        border-radius: 20px;
+    }
+    #leftColumn{
+        display: none;
+    
+    }
+    
+     #rightColumn {
+       width: 100%;
+       padding: 0%;
+    }
+    .row{
+        width: 100%;
+
+    }
+}
+@media  (min-width:721px) and (max-width:996px) {
+    #loginSign{
+        width: 50%;
+        background-image: linear-gradient(#183bc7, #12436b,#50bfc5);
+        justify-content: center;
+        border-radius: 20px;
+    }
+    #leftColumn{
+        display: none;
+    
+    }
+    
+     #rightColumn {
+       width: 100%;
+  
+    }
+    .row{
+        width: 90%;
+
+    }
+}
+@media  (min-width:997px) and (max-width:1100px) {
+    #loginSign{
+        width: 50%;
+        background-image: linear-gradient(#183bc7, #12436b,#50bfc5);
+        justify-content: center;
+        border-radius: 20px;
+    }
+    #leftColumn{
+        display: none;
+    
+    }
+    
+     #rightColumn {
+       width: 100%;
+    }
+    .row{
+        width: 80%;
+
+    }
+}
+@media  (min-width:1101px) and (max-width:1336px) {
+    #loginSign{
+        width: 40%;
+        background-image: linear-gradient(#183bc7, #12436b,#50bfc5);
+        justify-content: center;
+        border-radius: 20px;
+    }
+    #leftColumn{
+        display: none;
+    
+    }
+    
+     #rightColumn {
+       width: 100%;
+    }
+    .row{
+        width: 80%;
+
+    }
+}
