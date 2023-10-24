@@ -42,6 +42,7 @@ function validateInputs() {
     else if (text1.test(email.value)) {
         onError(email, "emil")
         success = false;
+        
     }
     else {
         onSuccess(email)
