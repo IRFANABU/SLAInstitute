@@ -14,7 +14,7 @@ form.addEventListener("submit", function (event) {
         event.preventDefault();
     }
     else {
-        postData();
+        // postData();
         // alert("register Suucessfully")
         
     }
@@ -85,23 +85,23 @@ function onError(input, message) {
 
 // post the Form data in to the Json Server
 
-const postData = () => {
-    const formRdata = new FormData(form);
-    const url="http://localhost:4000/register";
-    axios.post(url, formRdata, {
-        // method: "POST",
-        body: formRdata,
-        headers: {
-            "Content-Type": "application/json"
-        }
-    }).then(response => {
+// const postData = () => {
+//     const formRdata = new FormData(form);
+//     const url="http://localhost:4000/register";
+//     axios.post(url, formRdata, {
+//         // method: "POST",
+//         body: formRdata,
+//         headers: {
+//             "Content-Type": "application/json"
+//         }
+//     }).then(response => {
 
-        console.log(response)
-        console.log([...formRdata])
+//         console.log(response)
+//         console.log([...formRdata])
 
-    }).catch(err => { console.log(err) })
+//     }).catch(err => { console.log(err) })
 
-};
+// };
 
 
 

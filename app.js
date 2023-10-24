@@ -7,7 +7,7 @@ const { send } = require('process');
 app.use(express.static('public'));
 app.use(express.json())
 app.use(express.urlencoded({extends:true}))
-let publicPath = path.join(__dirname,'public/')
+let publicPath = path.join(__dirname,'/Frontend/public/')
 
 app.get('/', (req, res) => {
     res.sendFile((`${publicPath}/index.html`));
@@ -36,7 +36,7 @@ app.post('/register', (req, res) => {
         else {
             console.log(result)
             console.log("posted into database")
-            res.send({message:"succssfully posted"})
+            res.send({message:"succssfully posted",data: datas})
            
         }
     })
@@ -46,8 +46,9 @@ app.post('/register', (req, res) => {
 
 // 
 
-    app.get('/viewProductDetails.html',(req,res)=>{
-        res.send("new page")
+    app.get('/viewProductDetails',(req,res)=>{
+        // res.send("new page")
+        res.sendFile((`${publicPath}/cartPage.html`));
     })
 
 

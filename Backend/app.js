@@ -1,4 +1,4 @@
-var server = require('./DB_Connection/dbconnection')
+var connect = require('./DB_Connection/dbconnection')
 const express = require('express')
 const bodyParser = require('body-parser');
 const app = express();
@@ -29,7 +29,7 @@ app.post('/register', (req, res) => {
     
    
     var sqlInsert = "insert into registerform Values(?)"
-    server.query(sqlInsert, [datas], function (error, result) {
+    connect.query(sqlInsert, [datas], function (error, result) {
         if (error) {
             res.send({status:false, message:"failed"})
         }

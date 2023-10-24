@@ -1,0 +1,145 @@
+{
+
+    "productData" :[
+        {
+            "id": 1,
+            "image": "/image/iphone images/apple-iphone-11-1.jpg",
+            "model": "Iphone 11 Pro",
+            "color": "Black",
+            "storage": "128GB",
+            "ram": "12GB",
+            "camera": "48MP",
+            "processor": "A14 Bionic Chip",
+            "price": "64,000.0"
+    
+        }, {
+            "id": 2,
+            "image":"/image/iphone images/apple-iphone-11-1.jpg",
+            "model": "Iphone 12 Pro",
+            "color": "Black",
+            "storage": "128GB",
+            "ram": "12GB",
+            "camera": "16MP",
+            "processor": "A14 Bionic Chip",
+            "price": "64,000.00"
+    
+        }, {
+            "id": 3,
+            "image": "/image/iphone images/apple-iphone-11-1.jpg",
+            "model": "Huawei watch GT4",
+            "color": "Black",
+            "storage": "128GB",
+            "ram": "8GB",
+            "camera": "48MP",
+            "processor": "A14 Bionic Chip",
+            "price": "64,000.0"
+    
+        }, {
+            "id": 4,
+            "image": "/image/iphone images/apple-iphone-11-1.jpg",
+            "model": "Iphone 13 Pro",
+            "color": "Black",
+            "storage": "128GB",
+            "ram": "8GB",
+            "camera": "48MP",
+            "processor": "A14 Bionic Chip",
+            "price": "64,000.00"
+    
+        }, {
+            "id": 5,
+            "image": "/image/iphone images/apple-iphone-11-1.jpg",
+            "model": "Samsung Galaxy watch 5 ",
+            "color": "Black",
+            "storage": "256GB",
+            "ram": "4GB",
+            "camera": "48MP",
+            "processor": "A14 Bionic Chip",
+            "price": "64,000.00"
+    
+        },
+    
+        {
+            "id": 6,
+            "image": "/image/iphone images/apple-iphone-11-1.jpg",
+            "model": "Iphone 14 Pro",
+            "color": "Black",
+            "storage": "128GB",
+            "ram": "12GB",
+            "camera": "48MP",
+            "processor": "A14 Bionic Chip",
+            "price": "64,000.0"
+    
+        },
+        {
+            "id": 7,
+            "image":"/image/iphone images/apple-iphone-11-1.jpg",
+            "model": "Google Pixel watch",
+            "color": "Black",
+            "storage": "128GB",
+            "ram": "8GB",
+            "camera": "48MP",
+            "processor": "A14 Bionic Chip",
+            "price": "64,000.0"
+    
+        }, {
+            "id": 8,
+            "image":"/image/iphone images/apple-iphone-11-1.jpg",
+            "model": "Samsung galaxy s23 Ultra 5G",
+            "color": "Black",
+            "storage": "128GB",
+            "ram": "8GB",
+            "camera": "48MP",
+            "processor": "A14 Bionic Chip",
+            "price": "64,000.0"
+    
+        }, {
+            "id": 9,
+            "image":"/image/iphone images/apple-iphone-11-1.jpg",
+            "model": "Samsung Galaxy z fold5 5G",
+            "color": "Black",
+            "storage": "128GB",
+            "ram": "8GB",
+            "camera": "48MP",
+            "processor": "A14 Bionic Chip",
+            "price": "64,000.0"
+    
+        }, {
+            "id": 10,
+            "image": "/image/iphone images/apple-iphone-11-1.jpg",
+            "model": "Apple watch ultra 2",
+            "color": "Black",
+            "storage": "128GB",
+            "ram": "8GB",
+            "camera": "48MP",
+            "processor": "A14 Bionic Chip",
+            "price": "64,000.0"
+    
+        }
+        , {
+            "id": 11,
+            "image":"/image/iphone images/apple-iphone-11-1.jpg",
+            "model": "Oneplus 10 pro",
+            "color": "Black",
+            "storage": "256GB",
+            "ram": "4GB",
+            "camera": "48MP",
+            "processor": "A14 Bionic Chip",
+            "price": "64,000.00"
+    
+        }, {
+            "id": 12,
+            "image":"/image/iphone images/apple-iphone-11-1.jpg",
+            "model": "Oneplus 8 pro",
+            "color": "Black",
+            "storage": "256GB",
+            "ram": "4GB",
+            "camera": "48MP",
+            "processor": "A14 Bionic Chip",
+            "price": "64,000.00"
+    
+        }
+    
+    
+    ]
+    
+}
