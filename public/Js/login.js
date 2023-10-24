@@ -1,7 +1,3 @@
-// const { default: axios } = require("axios");
-
-// const { default: axios } = require("axios");
-
 const signuplink = document.getElementById("signup");
 const formLogin = document.getElementById('formLogin')
 const email = document.getElementById('Email');

@@ -9,20 +9,24 @@ var password2 = document.getElementById('p2');
 var form = document.getElementById('formSubmit');
 var button = document.getElementById('btn_form');
 
+
 form.addEventListener("submit", function (event) {
     if (!validateInputs()) {
+
         event.preventDefault();
+
     }
     else {
         // postData();
-        // alert("register Suucessfully")
-        
+        console.log("register Suucessfully")
+
     }
 
 })
 // Validatin function for Register Form
 
 function validateInputs() {
+    var text1 = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
     let success = true;
 
     (firstname.value.trim() === '') ? (onError(firstname, "Firstname is required"), success = false) : onSuccess(firstname);
@@ -33,36 +37,50 @@ function validateInputs() {
     if (email.value.trim() === '') {
         onError(email, "Email is required")
         success = false;
+
+    }
+    else if (text1.test(email.value)) {
+        onError(email, "emil")
+        success = false;
     }
     else {
         onSuccess(email)
-
     }
     if (password.value.trim() === '') {
         onError(password, "Password is required")
         success = false;
+
     }
     else {
         onSuccess(password)
     }
 
-    if (password2.value.trim() == '') {
-        onError(password2, "Password is required")
-
+    if (password2.value.trim() == "") {
+        onError(password2, "password is required")
+        success = false;
+    }
+    else if (password2.value.trim() !== password.value.trim()) {
+        onError(password2, "passsword is not match")
+        success = false;
     }
     else {
-
-        if (password2.value.trim() !== password.value.trim()) {
-            onError(password2, "passsword is not match")
-            success = false;
-        }
-        else {
-            onSuccess(password2)
-        }
-
+        onSuccess(password2)
     }
-    
+
+
+
     return success;
+}
+var text1 = "/^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/";
+function emailChecker(text) {
+    if (text1.match(text.value)) {
+
+        onError(email, "invalid")
+    }
+    else {
+        onSuccess(email)
+    }
+
 }
 function onSuccess(input) {
     let parent = input.parentElement;

@@ -14,10 +14,9 @@ window.addEventListener("load", async () => {
                 console.log(item)
                 pdata1.push(item)
             })
-            data(pdata1)
-            console.log(dta)
+            data(pdata1);
+            // console.log(dta)
             console.log(pdata1);
-
         })
     }
     catch (error) {
@@ -26,7 +25,7 @@ window.addEventListener("load", async () => {
 })
 
 
-//                      List of ProductDetails from cartPage
+//                      List of ProductDetails from cartPage creating Dynamically
 
 
 
@@ -65,11 +64,6 @@ const data = (productData) => {
         newDiv.appendChild(buttonDiv);
     }
 }
-
-
-//   ---------------------------------------------------------------------------------------- n
-
-
 // ==========================serach product data==============================================//
 
 
