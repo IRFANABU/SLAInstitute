@@ -1,45 +1,18 @@
 const signuplink = document.getElementById("signup");
 const formLogin = document.getElementById('formLogin')
 const email = document.getElementById('Email');
-const password1 = document.getElementById('Password');
+const password = document.getElementById('Password');
 const button = document.getElementById('loginButton')
 const smallerror = document.querySelector('small');
 formLogin.addEventListener("submit", (event) => {
-    if (!validateInput([email, password1])) {
+    if (!validateInput([email, password])) {
         event.preventDefault();
-        // checkEmail(email,datas);
-        getDataEmail(email)
-
     }
-    else {
-
+    else{
+        
     }
 })
 
-function getDataEmail(email) {
-    const formData = new FormData(formLogin)
-    console.log([...formData])
-    async function fetchData() {
-
-        try {
-            const URL1 = "/";
-            const getData = await axios({
-                method: "GET",
-                url: URL1,
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-
-            });
-            console.log(getData)
-        }
-        catch (error) {
-            console.log("", error);
-        }
-
-    }
-    fetchData();
-}
 
 
 function validateInput(inputs) {
@@ -49,11 +22,10 @@ function validateInput(inputs) {
             onError(inputsData, `${getInput(inputsData)} is required`);
             // console.log(inputsData.value)
         }
-        else {
-            onSuccess(inputsData)
-            window.location.href = "index.html"
+        else{
+            onSuccess(inputs)
         }
-
+       
     })
 }
 

@@ -1,5 +1,4 @@
 
-// const { default: axios } = require("axios");
 var firstname = document.getElementById('f1');
 var lastname = document.getElementById('l1');
 var username = document.getElementById('u1');
@@ -10,23 +9,34 @@ var form = document.getElementById('formSubmit');
 var button = document.getElementById('btn_form');
 
 
-form.addEventListener("submit", function (event) {
+form.addEventListener("submit",  function (event) {
     if (!validateInputs()) {
-
         event.preventDefault();
-
     }
-    else {
-        // postData();
-        console.log("register Suucessfully")
-
+    else{
+        alert("register succssfully")
+        
+    //     const formRdata = new FormData(form);
+        
+    //    axios.post("register", formRdata, {
+           
+    //         body: formRdata,
+    //         headers: {
+    //             "Content-Type": "application/json"
+    //         }
+    //     }).then(response => {
+    
+    //         console.log(response+"register")
+    //         // console.log([...formRdata])
+    
+    //     }).catch(err => { console.log(err) })
     }
+    
 
 })
 // Validatin function for Register Form
 
 function validateInputs() {
-    var text1 = "/^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/";
     let success = true;
 
     (firstname.value.trim() === '') ? (onError(firstname, "Firstname is required"), success = false) : onSuccess(firstname);
@@ -115,7 +125,7 @@ function onError(input, message) {
 //         }
 //     }).then(response => {
 
-//         console.log(response)
+//         console.log("register")
 //         console.log([...formRdata])
 
 //     }).catch(err => { console.log(err) })
