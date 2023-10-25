@@ -57,10 +57,15 @@ const data = (productData) => {
 
         var buttonDiv = document.createElement('div');
         buttonDiv.classList.add('buttonDivs')
-        buttonDiv.innerHTML = `<button class="button btn btn-primary w-100 " id="ViewBtn">View</button>`
-        var vBtn = document.getElementById('ViewBtn');
-        // buttonDiv.setAttribute('id', 'buttonss')
-
+        
+        // buttonDiv.innerHTML = `<button class="button btn btn-primary w-100" id="ViewBtn">View Product</button>`
+        
+        var vBtn = document.createElement('button');
+        buttonDiv.appendChild(vBtn);
+        vBtn.setAttribute('id',"ViewBtn")
+        vBtn.setAttribute('class',"btn btn-primary")
+        vBtn.textContent="View Product";
+        
         newDiv.appendChild(buttonDiv);
     }
 }
@@ -68,14 +73,32 @@ const data = (productData) => {
 
 
 var searchButton = document.getElementById('searchBtn');
-
+const searchInput = document.getElementById('searchProductData').value;
+const products = document.querySelectorAll('.cardProduct')
+const productName = document.querySelectorAll('.h4')
+const errorsSpan = document.getElementById('errorSpan');;
 searchButton.addEventListener("click", () => {
-    const searchInput = document.getElementById('searchProductData').value;
-    const products = document.querySelectorAll('.cardProduct')
-    const productName = document.querySelectorAll('.h4')
-    const errorsSpan = document.getElementById('errorSpan');;
     console.log(searchInput)
     console.log('clicked')
+    // alert("sdasfd")
+    // let promise = new Promise((resolve,reject)=>{
+    //     if(searchInput.value==""){
+    //         reject("dsfd")
+    //        alert("fill");
+    //     }
+    //     else{
+    //        resolve("no problem")
+    //     }
+
+    // })
+
+    // promise.then(()=>{
+    //     console.log("dsds")
+    //     alert("asfsfsff")
+    // }).catch(()=>{
+    //     alert("problem")
+    // })
+   
     productName.forEach((item, index) => {
         (item.innerText.includes(searchInput.toUpperCase())) ? (products[index].classList.remove("hide"),
             products[index].classList.add('visible')) : products[index].classList.add("hide");
@@ -120,16 +143,10 @@ spanMenuIcon.addEventListener("click", async () => {
     }
 })
 
-Dates()
-function Dates() {
-    var gDates = new Date;
-    let cData = gDates.setDate(10)
-    var cMon = gDates.getMonth();
-    var hour = gDates.getHours();
-    console.log(hour + 16)
-    // console.log(cYear)
-    console.log("date" + ":" + (cData) + " month" + ":" + cMon)
-}
+
+
+   
+
 
 
 

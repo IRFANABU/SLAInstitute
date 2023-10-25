@@ -72,11 +72,7 @@ top:40%;
     border-radius: 10px;
     
 }
-#inputSearch input:focus{
 
-    
-
-}
 input:placeholder-shown{
     
     text-align: center;
@@ -160,11 +156,6 @@ input:placeholder-shown{
 
 }
 
-.cardProduct #buttonss{
-
-
-    
-}
 
 .nameDiv h4 {
     /* margin-top: 20px; */
@@ -178,22 +169,16 @@ input:placeholder-shown{
     /* padding: 1px 40px 0px; */
 }
 
-.cardProduct .nameDiv {
 
-}
 .cartBt{
     cursor: pointer;
 }
+#ViewBtn{
 
-#buttonss button{
-  
-    width: 100px;
-    background-color:#12abb3;
-    height: 30px;
-    text-transform: uppercase;
-    border-radius: 10px;
-
+    padding: 5px 30px;
 }
+
+
 .cardProduct #buttonss{
     display: flex;
    max-width:100%;
@@ -269,9 +254,7 @@ input:placeholder-shown{
     #inputSearch input{
        width: 75%;
     }
-    .cardProduct{
-      
-    }
+   
     nav .user{
         display: none;
     }

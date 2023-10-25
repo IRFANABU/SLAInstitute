@@ -26,7 +26,7 @@ form.addEventListener("submit", function (event) {
 // Validatin function for Register Form
 
 function validateInputs() {
-    var text1 = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
+    var text1 = "/^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/";
     let success = true;
 
     (firstname.value.trim() === '') ? (onError(firstname, "Firstname is required"), success = false) : onSuccess(firstname);
@@ -39,10 +39,10 @@ function validateInputs() {
         success = false;
 
     }
-    else if (text1.test(email.value)) {
+    else if ((email.value).match(text1)) {
         onError(email, "emil")
         success = false;
-        
+
     }
     else {
         onSuccess(email)

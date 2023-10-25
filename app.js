@@ -3,17 +3,23 @@ const express = require('express')
 const bodyParser = require('body-parser');
 const app = express();
 const path = require('path');
-const { send } = require('process');
-app.use(express.static('public'));
+const hbs = require('hbs');
 app.use(express.json())
 app.use(express.urlencoded({extends:true}))
-let publicPath = path.join(__dirname,'/Frontend/public/')
-
-app.get('/', (req, res) => {
-    res.sendFile((`${publicPath}/index.html`));
+let publicPath = path.join(__dirname,'./public')
+app.use(express.static(publicPath));
+app.set("view engine","hbs");
+app.get("/", (req, res) => {
+    // res.sendFile((`${publicPath}/index.html`));
+    res.render("index")
+})
+app.get("/login", (req, res) => {
+    // res.sendFile((`${publicPath}/index.html`));
+    res.render("login")
 })
 app.get('/signup', (req, res) => {
-    res.sendFile((`${publicPath}/signup.html`));
+    // res.sendFile((`${publicPath}/signup.html`));
+    res.render("signup")
 })
 app.post('/register', (req, res) => {
     // res.sendFile(path.join(__dirname,'public','create_Account.html'));
