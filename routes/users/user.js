@@ -38,7 +38,7 @@ routers.route('/post').post( (req, res) => {
             else {
                 console.log(result)
                 console.log("posted into database")
-                res.render('login')
+                res.redirect('login')
             }
         })
       

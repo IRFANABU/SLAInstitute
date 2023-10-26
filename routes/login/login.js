@@ -7,14 +7,14 @@ routers.get("/",(req, res) => {
 routers.get("/signup",(req, res) => {
     res.render("signup")
 })
-routers.post('/home',(req,res)=>{
+routers.route('/home').post((req,res)=>{
     // res.send("hello welcome")
-    sqlQuery= "select * from formdata wher"
+    sqlQuery= "select id from formdata where email = ? and password = ?"
     server.query(function(err,result){
-
+       
     })
-
-    res.render('index')
+    res.render('index',{message:req.body});
+    
 })
 // routers.route('/auth').post( (req, res) => {
 //     res.render('/index')

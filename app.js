@@ -18,8 +18,8 @@ app.set("view engine","hbs");
 const loginRoute = require("./routes/login/login")
 const userRoute = require("./routes/users/user")
 const homeRoute = require("./routes/Home/home")
-app.use("/",userRoute);
 app.use("/",loginRoute);
+app.use("/",userRoute);
 app.use("/",homeRoute);
 
 app.listen(4000, (err, result) => {
