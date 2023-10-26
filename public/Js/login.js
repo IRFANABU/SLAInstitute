@@ -4,6 +4,7 @@ const email = document.getElementById('Email');
 const password = document.getElementById('Password');
 const button = document.getElementById('loginButton')
 const smallerror = document.querySelector('small');
+
 formLogin.addEventListener("submit", (event) => {
     if (!validateInput([email, password])) {
         event.preventDefault();
@@ -16,14 +17,16 @@ formLogin.addEventListener("submit", (event) => {
 
 
 function validateInput(inputs) {
-
+    
     inputs.forEach((inputsData) => {
         if ((inputsData.value.trim()) === "") {
             onError(inputsData, `${getInput(inputsData)} is required`);
-            // console.log(inputsData.value)
+           
         }
         else{
-            onSuccess(inputs)
+            onSuccess(inputsData);
+            console.log(inputsData.value)
+           
         }
        
     })

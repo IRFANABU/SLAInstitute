@@ -21,7 +21,24 @@ var con = mysql.createConnection({
 //     if (error) throw error;
 //     console.log("created")
 // })
-con.connect(function (error) {
+// con.query("select * from registerform where email='irfan10942@gmail.com' and password='asdf'", function (error, result2) {
+//     if (error) throw error;
+//     console.log(result2)
+// })
+
+// var emails="irfan10942@gmail.com";
+// var pwd="asdf";
+// sqlQuery= ("SELECT * from `registerform`");
+// console.log(sqlQuery)
+// con.query(sqlQuery, function (error, result2) {
+//         if (error) throw error;
+//         console.log(result2)
+//     })
+
+
+
+
+    con.connect(function (error) {
     if (error) {
         console.log(error + "failed to connect")
     }

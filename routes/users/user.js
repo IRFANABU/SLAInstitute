@@ -1,6 +1,7 @@
 const express = require ('express');
 var routers = express.Router();
-const server = require("../../Backend/DB_Connection/dbconnection")
+const server = require("../../Backend/DB_Connection/dbconnection");
+const con = require('../../Backend/DB_Connection/dbconnection');
 
 // routers.use((res,req)=>{
 //     console.log("please Help")
@@ -17,31 +18,42 @@ routers.get('/login',(req, res) => {
 
 // separate routes using in node js for router to post data
 
-routers.route('/post').post( (req, res) => {
+routers.route('/post/login').post( async(req, res) => {
 
-        console.log(req.body)
-        let datas = [
-            id= req.body.id,
-            firstname=req.body.Firstname,
-            lastname=req.body.Lastname,
-            email= req.body.email,
-            password=req.body.password,
-            conformpassword=req.body.conformpassword
-        ] 
+        try{
+            console.log(req.body)
+            let datas = [
+                id = req.body.id,
+                firstname=req.body.Firstname,
+                lastname=req.body.Lastname,
+                email= req.body.email,
+                password=req.body.password,
+                conformpassword=req.body.conformpassword
+            ] 
+                
+        // /  let datas { [id=id,firstname=Firstname,lastname=Lastname,email=email,password=password,confrompassword = conformpassword]}=req.body;
+            var sqlInsert = "insert into registerform Values(?)"
+          const rows = await server.query(sqlInsert, [datas], function (error, result) {
+                if (error) {
+                    res.send({status:false, message:"failed"})
+                    // console.log(rows)
+                }
+                else {
+                    console.log(result)
+                    console.log("posted into database")
+                    res.render('/login')
+                }
+            })
+          
             
-    // /  let datas { [id=id,firstname=Firstname,lastname=Lastname,email=email,password=password,confrompassword = conformpassword]}=req.body;
-        var sqlInsert = "insert into registerform Values(?)"
-        server.query(sqlInsert, [datas], function (error, result) {
-            if (error) {
-                res.send({status:false, message:"failed"})
-            }
-            else {
-                console.log(result)
-                console.log("posted into database")
-                res.redirect('login')
-            }
-        })
-      
+        }
+        catch(err){
+            console.error(err);
+        }
+        // finally{
+        //     server.end()
+        // }
+    
     })
 // C:\work\React\Website\views\login.hbs: Cannot set headers after they are sent to the client 
 //  res.render("login")
