@@ -128,12 +128,27 @@ const productData = [
 
 
 ]
+const getProduct = [];
+window.addEventListener("load", async () => {
+    try {
+        const aswait = fetch("Product.json").then(res =>
+            res.json()).then(datas => {
+                console.log(datas);
+                const datass = datas.productData
+                datass.forEach((item) => {
+                    getProduct.push(item)
+                })
+                data(getProduct);
 
+            })
+    }
+    catch (err) {
+        console.log(err + "failed to get data from product.json");
+    }
 
-data()
-function data() {
+})
 
-    getData = "";
+function data(productData) {
     for (let pData of productData) {
         // var newImg = new Image();
         var productListData = document.getElementById('productList');
@@ -162,24 +177,24 @@ function data() {
         var buttonDiv = document.createElement('div');
         buttonDiv.classList.add('buttonDivs')
         buttonDiv.setAttribute('id', 'buttonss')
-        
+
         newDiv.appendChild(buttonDiv);
 
 
         var vBtn = document.createElement('button');
         buttonDiv.appendChild(vBtn);
-        vBtn.setAttribute('id',"ViewBtn")
-        vBtn.setAttribute('class',"btn btn-primary")
-        vBtn.textContent="View Product";
+        vBtn.setAttribute('id', "ViewBtn")
+        vBtn.setAttribute('class', "btn btn-primary")
+        vBtn.textContent = "View Product";
         newDiv.appendChild(buttonDiv);
         // error   
         //Uncaught TyperError: failed to execute 'appenchild' on node :parameter 1 is not  of type 'node';
         // var viewBtn = document.createElement('button');
         // viewBtn.textContent = "View"
         // viewBtn.setAttribute('id', 'viewProduct');
-        
 
-      
+
+
     }
 }
 
@@ -202,8 +217,8 @@ searchButton.addEventListener("click", () => {
     productName.forEach((item, index) => {
         (item.innerText.includes(searchInput.toUpperCase())) ? (products[index].classList.remove("hide"),
             products[index].classList.add('visible')) : products[index].classList.add("hide");
-       
-    
+
+
     })
 })
 
