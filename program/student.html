@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+
+
+    <Style>
+        * {
+            box-sizing: border-box;
+        }
+
+        #Data {
+            width: 50%;
+            justify-content: center;
+            margin-top: 0px;
+            display: none;
+
+        }
+
+        h2 {
+            text-transform: uppercase;
+            text-align: center;
+        }
+    </Style>
+</head>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<body style=" display:flex; flex-direction: column; align-items:center; top:0px; height: 100vh;">
+
+    <div class="container  w-50 bg-light  d-flex flex-column  ">
+        <div>
+            <h2 class="fs-2 "> Student Mark Details</h2>
+        </div>
+        <div class="row">
+
+            <div class=" col-md-6  mb-3">
+                <label for="">TamilMark</label>
+                <input type="text" class="form-control " name="name" id="f" placeholder="Enter your mark" required>
+                <div id="error"></div>
+            </div>
+            <div class=" col-md-6 mb-3">
+                <label for="">EnglishMark</label>
+                <input type="text" class="form-control " name="name" id="e" placeholder="Enter your mark">
+                <div id="error"></div>
+            </div>
+            <div class="col-md-6 mb-3 ">
+                <label for="">MathsMark</label>
+                <input type="text" class="form-control " name="name" id="m" placeholder="Enter your mark">
+                <div id="error"></div>
+            </div>
+
+            <div class=" col-md-6 mb-3">
+                <label for="">ScienceMark</label>
+                <input type="text" class="form-control " name="name" id="s" placeholder="Enter your mark">
+                <div id="error"></div>
+            </div>
+            <div class=" col-md-12 mb-3">
+                <label for="Lastname">Social-mark</label>
+                <input type="text" class="form-control" name="name" id="sc" placeholder="Enter your mark">
+                <div id="error"></div>
+            </div>
+            <div class="col-12">
+                <button id="btn_result" class="btn btn-primary mb-3 w-100" onclick="schoolMarkDetails()">Click here to
+                    calculate</button>
+
+            </div>
+            <div class="">
+                <button id="btn" class="btn btn-dark w-100" onclick="table()">click here to see result</button>
+            </div>
+
+        </div>
+
+    </div>
+    <div id="Data">
+        <h1 style="text-transform:uppercase; text-align: center;">Student Details</h1>
+        <table style="color: rgb(2, 2, 2); border-radius: 2px; border: 2px solid; border-color:  rgb(148, 107, 107);">
+            <thead style="background-color: rgb(148, 107, 107);">
+                <th style=>Student Name</th>
+                <th>Tamil Mark</th>
+                <th>English Mark</th>
+                <th>Maths Mark</th>
+                <th>Science Mark</th>
+                <th>Social Mark</th>
+                <th>Total out of 500</th>
+                <th>Average</th>
+                <th>Status</th>
+            </thead>
+            <tbody>
+                <tr style="background-color:rgb(138, 151, 119);">
+                    <td id="namestatus"></td>
+
+                    <td id="tamilstatus"></td>
+                    <td id="englishstatus"></td>
+                    <td id="mathsstatus"></td>
+                    <td id="sciencestatus"></td>
+                    <td id="socialstatus"></td>
+                    <td id="outof"></td>
+                    <td id="averagestatus"></td>
+                    <td id="result"></td>
+                </tr>
+
+            </tbody>
+        </table>
+
+    </div>
+
+
+</body>
+<script type="text/javascript">
+
+    var buttonResult = document.getElementById('btn_result')
+
+    buttonResult.addEventListener("click", schoolMarkDetails());
+
+    // window.onclick= function() {
+    //  schoolMarkDetails()
+    function schoolMarkDetails() {
+        var tamilMark = document.getElementById('f').value;
+        var englishmark = Number(document.getElementById('e').value);
+        var mathsMark = Number(document.getElementById('m').value);
+        var sciencemark = Number(document.getElementById('s').value);
+        var socialMark = Number(document.getElementById('sc').value);
+
+
+        total = +(tamilMark + englishmark + sciencemark + mathsMark + socialMark);
+        document.getElementById("outof").innerHTML = total;
+        console.log("Whole total:" + total)
+        document.getElementById('namestatus').innerHTML = name;
+        document.getElementById('tamilstatus').innerHTML = tamilMark;
+        document.getElementById('englishstatus').innerHTML = englishmark;
+        document.getElementById('mathsstatus').innerHTML = mathsMark;
+        document.getElementById('sciencestatus').innerHTML = sciencemark;
+        document.getElementById('socialstatus').innerHTML = socialMark;
+
+
+
+        total_Mark(tamilMark, englishmark, mathsMark, sciencemark, socialMark);
+        averageMark(total)
+        passOrFail(tamilMark, englishmark, mathsMark, sciencemark, socialMark)
+
+
+    }
+
+
+    function total_Mark(T, E, M, S, S1) {
+        let totalMark = 0;
+        totalMark = +(T + E + M + S + S1);
+        console.log("Total mark is :" + totalMark)
+    }
+
+    function averageMark(fu) {
+        var average = +Number(fu) / 5;
+        console.log("Average Mark is:" + average);
+        document.getElementById('averagestatus').innerHTML = average
+    }
+
+    function passOrFail(T, E, M, S, S1) {
+        var passMark = 35;
+        // let result=Boolean;
+        if (T >= passMark && E >= passMark && M >= passMark && S >= passMark && S1 >= passMark) {
+            console.log("Pass");
+            document.getElementById('result').textContent = "Pass"
+
+        }
+        else {
+            console.log("Fail");
+            document.getElementById('result').textContent = "fail"
+
+        }
+    }
+
+
+    // }
+
+
+    function table() {
+
+
+        document.getElementById('Data').style.display = "block";
+
+
+    }
+    function amicable(a, b) {
+
+        function divisor(x) {
+            let res = 0;
+            for (i = 1; i < x; i++) {
+                if (x % i == 0) {
+                    res = res + i;
+                }
+            }
+            return res;
+        }
+        console.log(divisor(b))
+        console.log(divisor(a))
+        if ((divisor(a) == b) && (divisor(b) == a)) {
+            console.log("its applicable number");
+        }
+        else {
+            console.log("its not applicable number");
+        }
+    }
+    amicable(200, 220);
+
+    var arra = ["apple", "mango", "apple",
+        "orange", "mango", "mango"];
+
+    function removeDuplicates(arra) {
+        return arra.filter((item,
+            index) => arra.indexOf(item) === index);
+        console.log(arra)
+    }
+    console.log(arra)
+
+    // -------------------------------------------------------------------------------
+
+
+
+    let nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    let target = 8;
+    let arr = [];
+    for (i = 0; i < nums.length; i++) {
+        for (j = i + 1; j < nums.length; j++) {
+            if (nums[i] + nums[j] == target) {
+                console.log(nums[i])
+                let x = nums[i];
+
+
+                let y = nums[j];
+                console.log(y)
+                let z = [x, y]
+                console.log(x, y)
+                arr.push(z)
+            }
+        }
+    }
+    console.log(arr)
+
+
+
+
+    function maxNumber() {
+        
+        const numbers = [100, 800, 200, 900, 700];
+
+        let temp = 0;
+
+        for (i = 0; i < numbers.length; i++) {
+            for (j = i + 1; j < numbers.length; j++) {
+                if (numbers[i] < numbers[j]) {
+                    temp = numbers[i];
+                    numbers[i] = numbers[j];
+                    numbers[j] = temp;
+                   
+                }
+            }
+        }
+
+       
+        console.log(numbers[j]);
+
+    }
+
+
+
+    const numbers = [100, 800, 200, 900, 700,100];
+
+let save = 0;
+
+for (i = 0; i < numbers.length; i++) {
+   
+    for(j=i+1;j < numbers.length ;j++){
+        if(numbers[i] == numbers[j]){ //     i-100 ,j-check j-800   i-800 ,j=check 
+            save = numbers[i] //   temp - 100   temp -800
+            numbers[i] = numbers[j] // ( j-800 ,   i-800)  ,(j -900 , i-900)
+            numbers[j] = save;  ///    ( t-100 , j-100  ) (t-800, j-800)
+        }
+      
+    }
+
+
+     console.log(numbers[i]);
+    
+
+}
+
+
+// console.log(numbers[4]);
+
+let a ="hello world";
+let s = "";
+reverse()
+function reverse () {
+    for (i=0;i<a.length;i++){
+        console.log(a.charAt(i));
+    }
+    for (i=a.length-1 ;i>=0 ;i--){
+        let c = a
+        // let s = a.substring(1).toUpperCase();
+       s= c.charAt(i);
+
+        console.log(i+"---"+ s);
+
+    }
+
+}
+
+
+
+ let count=0;
+ charArray()
+function charArray () {
+    let store='';
+  let  b ="hello world";
+//   store = a.charAt(i);
+//   console.log(store)
+  for (i=0;i<b.length;i++){
+    store = b.charArray;
+//    if (store =='a'&& store == 'o'){
+//     count++;
+    
+//    }
+  }
+console.log(count)
+
+}
+
+</script>
+
+</html>

@@ -1,0 +1,142 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(#157e9a, #232455);
+    height: 100vh;
+   
+}
+
+.container_form {
+    width: 400px;
+    justify-content: center;
+    /* background-image: linear-gradient(#987899, #232455); */
+    /* background:url(/images/iphone\ 14\ pro.jpg) ; */
+    border-radius: 5px;
+    box-shadow: 1px 0.5px 50px 0.5px rgb(63, 67, 63);
+   padding: 20px;
+}
+
+
+label {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-top: 0px;
+    color: white;
+
+}
+
+h2 {
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
+}
+
+
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+    border-radius: 30px;
+}
+
+.input-group input {
+    border: 2px solid rgb(211, 212, 219);
+   font-size: large;
+   height: 35px;
+   
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 10px;
+    
+
+}
+
+
+.input-group.success input{
+    border: rgb(79, 252, 79) solid 3px;
+}
+.input-group.error input{
+    border: rgb(237, 38, 55) solid 2px;
+}
+
+
+
+form button {
+    width: 100%;
+    border-radius: 10px;
+    padding: 5px;
+    font-weight: lighter;
+    font-size: 20px;
+    
+}
+form span{
+color: white;
+
+}
+button:active{
+    color: blue;
+    background-color: aliceblue;
+}
+#alreadyLogin{
+    text-align: center;
+    color: white;
+    font-size: small;
+    background-color: #232455;
+    line-height: 25px;
+    margin-top: 10px;
+}
+
+
+form small{
+    color: red; 
+ display: none;
+ margin-top: 5px;
+ font-size: medium;
+
+}
+input::placeholder{
+    text-align: center;
+    font-size: medium;
+}
+
+
+@media (min-width:500px)  and (max-width:720px){
+    .container_form{
+        max-width: 50%;
+        justify-content: center;
+    }
+
+    .input-group {
+    display: flex;
+    flex-direction: column;
+   
+
+}
+
+.input-group input {
+    border: 2px solid rgb(211, 212, 219);
+   font-size: medium; 
+    border-radius: 10px;
+    height: 30px;  
+}
+label{
+    font-size: small;
+}
+button{
+    height: 30px;
+    font-size: small;
+    align-items: center;
+}
+form small{
+    font-size: small;
+    margin-top: 0;
+}
+
+    
+}
