@@ -1,0 +1,121 @@
+
+
+*{
+    box-sizing: border-box;
+   background: fixed;
+}
+
+#videotext{
+    text-transform: uppercase;
+    position: absolute;
+    z-index: 2;
+    font-size: 50px;
+    text-align: center;
+    transform: translate(-50%,-50%);
+    top: 60%;
+    left: 50%;
+}
+#signin{
+    text-transform: uppercase;
+    font-size: x-large;
+    position: absolute;
+    z-index: 3;
+    text-align: center;
+    transform: translate(-50%,-50%);
+    top: 80%;
+    left: 50%;
+  
+}
+video{
+    z-index: 0;
+}
+
+
+form button{
+        text-transform: uppercase;
+}
+
+
+
+
+#span_head{
+    color: black;
+}
+#boot-icon{
+    font-size: 27px; color: rgb(11, 11, 11); opacity: 1; -webkit-text-stroke-width: 0.9px;
+}
+#video_section{
+    background-color: black;
+}
+#span_text{
+    color: white;
+}
+#footer_main{
+    background-color: rgb(4, 1, 1);
+}
+#samss{
+    border-radius:100px;max-width:100%;max-height: 300px;
+}
+
+
+
+@media only screen and (max-width:480px ) {
+    #videotext{
+       font-size: small;
+        
+        top:30%;
+        z-index: 0;
+
+    }
+
+    #signin{
+        top: 40%;
+        font-size:xx-small ;
+
+
+    }
+    #signup{
+        float: right;
+    }
+   
+    
+}
+    
+@media(min-width:481px ) and (max-width:768px)  {
+    #videotext{
+        font-size:large;
+        top: 40%;
+        z-index: 0;
+
+    }
+
+    #signin{
+        top: 50%;
+        font-size:large ;
+
+
+    }
+    
+}
+@media(min-width:769px ) and (max-width:1024px)  {
+    #videotext{
+        font-size:20px;
+        top: 40%;
+        z-index: 0;
+
+    }
+
+    #signin{
+        top: 50%;
+        font-size:large ;
+
+
+    }
+    
+}
+
+/* .col-md-12{
+    justify-content: center;
+    j
+
+} */

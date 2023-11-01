@@ -1,0 +1,97 @@
+* {
+    box-sizing: border-box;
+
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    place-content: center;
+    background-color: rgb(163, 173, 174);
+}
+
+
+
+#formLogin #loginButton {
+    border-radius: 10px;
+
+}
+
+#formLogin img {
+    max-width: 25%;
+    background-color: aliceblue;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+#formLogin h2 {
+    text-align: center;
+}
+
+
+
+
+.form-group label {
+    font: 1em sans-serif;
+}
+
+
+.form-group.success input{
+
+
+    border: 3px rgb(150, 218, 48) solid;
+
+}
+
+.form-group.error input {
+
+
+    border: red 2px solid;
+    border-radius: 5px;
+}
+.form-group input{
+    border: #657dad 2px solid;
+}
+
+
+
+input::placeholder {
+    color: antiquewhite;
+}
+
+
+/*  //////////////////////////////////////////*/
+
+
+#formLogin {
+    display: grid;
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid white;
+    max-width: 400px;
+    background-image: linear-gradient(#427e9a, #232455);
+    background-repeat: no-repeat;
+    box-shadow: 5px 5px 10px 5px rgb(49, 51, 49);
+
+}
+
+#signup {
+    border-radius: 10px;
+    padding: 5px 15px;
+    text-decoration: none;
+    color: rgb(105, 83, 83);
+    border: white 2px solid;
+}
+
+#signup:active {
+    background: white;
+}
+
+.form-group.error small{
+  
+    color: red;
+    
+
+}
