@@ -14,6 +14,8 @@ function insert_query(){
     $sql = "Insert into registerform (`firstname`,`lastname`,`email`,`password`,`conformpassword`) values ('" .$firstname."','" .$lastname."','" .$email."','" .$pwd."','" .$cpwd."')";
    if( $conn->query($sql)===TRUE){
     echo "values submitted";
+    header('cartPage.php');
+    exit;
    }
    else{
     echo "failed to post ";
@@ -30,7 +32,13 @@ function insert_query(){
     //     echo $result;
     //     $conn->close();   
     // }
+
+
+    
  }
+
+
+ 
 
  $obj = new dbconnect();
  $obj->insert_query();

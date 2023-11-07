@@ -164,14 +164,27 @@ top: 100px;
 
 #ulData{
 display: none;
+z-index: 99;
+position: absolute;
+padding-right: 100px;
+max-width: 200px;
 }
 #ulData :hover{
 background-color: #aa669a;
 color: #ffffff;
+
+}
+#ulData a{
+    text-decoration: none;
+   
 }
 #videoSec button{
 padding: 0 40px 10px;
 text-align: justify;
+}
+#carouselTab{
+    position: relative;
+    z-index: -1;
 }
 
  @media screen and (min-width:400px) and (max-width:720px){

@@ -10,15 +10,70 @@ const smallerror = document.querySelector('small');
 String.prototype.isEmail = function () {
     return !!this.match(/^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/);
 }
+const validateEmail = (getEmail) => {
+    if (!getEmail.value.trim().isEmail()) {
+        onError(getEmail, "Invalid Emaild Address");
+        return false;
+    }
+    else {
+        onSuccess(getEmail);
+        return true;
+    }
+}
+
+
+function validateInput(inputs) {
+
+    inputs.forEach((inputsData) => {
+        if ((inputsData.value.trim()) === "") {
+            onError(inputsData, `${getInput(inputsData)} is required`);
+
+        }
+        else {
+            onSuccess(inputsData);
+
+        }
+
+    })
+}
+
+function getInput(inputd) {
+    return inputd.id;
+
+}
+
+function onError(input, messege) {
+    const parents = input.parentElement;
+    parents.className = "form-group error"
+    let msgEle = parents.querySelector('small');
+    msgEle.innerText = messege;
+
+}
+
+function onSuccess(input) {
+
+    let formgroup = input.parentElement;
+    formgroup.className = 'form-group success'
+    let msgEle = formgroup.querySelector('small');
+    msgEle.innerText = "";
+}
+
+
 
 formLogin.addEventListener("submit", (event) => {
     event.preventDefault();
-    (!validateInput([email, password1]))
-    getDataEmail(email)
-
-
-
+    (!validateInput([email, password1]));
+    (!validateEmail(email));
 })
+
+// $(document).ready(function () {
+//     $(".fa-eye").click(function () {
+//         $(this).toggleClass
+//         var input = $('#Password');
+//         if (input.attr("type") === "password")
+//             })
+// })
+
 
 function getDataEmail(givenEmailVal) {
     // const formData = new FormData(formLogin)
@@ -51,55 +106,3 @@ function getDataEmail(givenEmailVal) {
     }
 
 }
-
-
-function validateInput(inputs) {
-
-    inputs.forEach((inputsData) => {
-        if ((inputsData.value.trim()) === "") {
-            onError(inputsData, `${getInput(inputsData)} is required`);
-
-        }
-        else {
-            onSuccess(inputsData)
-
-        }
-
-    })
-}
-
-function getInput(inputd) {
-    return inputd.id;
-
-}
-
-function onError(input, messege) {
-    const parents = input.parentElement;
-    parents.className = "form-group error"
-    let msgEle = parents.querySelector('small');
-    msgEle.innerText = messege;
-
-}
-
-function onSuccess(input) {
-
-    let formgroup = input.parentElement;
-    formgroup.className = 'form-group success'
-    let msgEle = formgroup.querySelector('small');
-    msgEle.innerText = "";
-}
-
-const crossEmail = (getData) => {
-    if (getData.data.email !== email.value) {
-        console.log("error")
-    }
-}
-
-
-// $(document).ready(function () {
-//     $(".fa-eye").click(function () {
-//         $(this).toggleClass
-//         var input = $('#Password');
-//         if (input.attr("type") === "password")
-//             })
-// })

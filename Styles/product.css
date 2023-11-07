@@ -16,7 +16,11 @@ nav {
     display: grid;
 }
 
-a:hover {
+nav #user{
+    display: inline-flex;
+}
+
+#head_ul a:hover {
     border-radius: 3px;
     background-color: white;
 
@@ -26,6 +30,7 @@ nav .menu {
     display: none;
     cursor: pointer;
 }
+
 
 nav img {
     max-width: 200px;
@@ -43,7 +48,7 @@ nav img {
 
 }
 
-#inputSearch button {
+#inputSearch #searchBtn {
     background-color: rgb(230, 211, 204);
     border-radius: 10px;
     padding: 5px;
@@ -84,11 +89,7 @@ input:placeholder-shown {
     align-items: center;
     row-gap: 10px;
     column-gap: 100px;
-
-
-
 }
-
 
 .cardProduct {
     display: flex;
@@ -122,7 +123,7 @@ input:placeholder-shown {
 
 
 .nameDiv h4 {
-    /* margin-top: 20px; */
+    
     margin-bottom: 40px;
     font-size: medium;
     text-align: center;
@@ -130,10 +131,9 @@ input:placeholder-shown {
     color: rgb(0, 0, 0);
     border-top: #a991b8 2px solid;
     border-bottom: #a991b8 2px solid;
-    /* padding: 1px 40px 0px; */
+    
 }
 
-.cardProduct .nameDiv {}
 
 .cartBt {
     cursor: pointer;
@@ -187,13 +187,6 @@ input:placeholder-shown {
         width: 75%;
     }
 
-    .cardProduct {}
-
-    #user {
-        display: none;
-    }
-
-
     nav .menu {
         padding: 20px;
         display: block;
@@ -203,6 +196,9 @@ input:placeholder-shown {
 
 
 
+    }
+    nav #user{
+        display: none;
     }
 
     nav .title {
