@@ -13,7 +13,7 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>    
-<link rel = stylesheet href="Styles/home.css"
+<link rel = stylesheet href="Styles/home.css">
 <body>
     <div>
         <nav class="navbar navbar-expand" id="head_nav">
