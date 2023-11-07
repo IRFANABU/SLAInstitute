@@ -71,6 +71,22 @@
      
     </div>
     <section id="image_sec">
+        <div class=" container d-flex justify-content-between my-2 p-5">
+        <h1 class="fs-1">SUPPORT</h1>
+        <input type="search" name="serach" id="searchcontact" class="form-serach w-25 fa fa-search" placeholder="Please enter your question">
+        </div>
+        <div class="container">
+        <span class="fs-5 ">How can I help You ?</span>
+        </div>
+        </div>
+        <div class="container d-flex p-2" id="repairContent" style="border-top:1px solid gray; border-bottom:1px solid gray"> 
+            <div class="col-lg-4 col-md-4">
+            <h2>Repair Service</h2>
+            </div>
+            <div class="col-lg-8 col-md-8">
+            <img src="image/repaircontact.jpg" alt="repair" class="w-100">
+            </div>
+        </div>
     </section>
     <div class="container-fluid">
         <div class="container w-75">
