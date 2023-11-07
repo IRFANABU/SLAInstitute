@@ -48,7 +48,7 @@ nav .menu{
     position: fixed;
     width: 100vw;
     display: none;
-    background-image: url("image/darkFooter.jpg");
+    background-color: transparent;
 }
 #xFont{
    
