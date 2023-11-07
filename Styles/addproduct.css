@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    border: 0;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+
+
+@media (min-width:450px) and (max-width:720px) {
+    #AddBtn{
+        max-width: 100%;
+    }
+    #formcont{
+            width: 100px;
+    }
+
+    #productForm{
+    width: 100%;
+
+       
+    }
+}
