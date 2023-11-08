@@ -26,6 +26,9 @@ nav .menu {
     display: none;
     cursor: pointer;
 }
+nav #user{
+    display: inline-flex;
+}
 
 nav img {
     max-width: 200px;
@@ -43,14 +46,12 @@ nav img {
 
 }
 
-#inputSearch > #searchbtn {
+#inputSearch > #searchBtn {
     background-color: rgb(230, 211, 204);
     border-radius: 10px;
     padding: 5px;
     height: 40px;
     width: 100px;
-    transition: all;
-    transform: active;
 }
 
 #inputSearch input .error {
@@ -63,8 +64,6 @@ nav img {
     border-radius: 10px;
 
 }
-
-#inputSearch input:focus {}
 
 input:placeholder-shown {
 
