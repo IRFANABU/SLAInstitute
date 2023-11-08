@@ -12,11 +12,10 @@ ul:first-child {
 
 nav {
     background-image: linear-gradient(#987899, #232455);
-
     display: grid;
 }
 
-a:hover {
+nav > a:hover {
     border-radius: 3px;
     background-color: white;
 
@@ -46,8 +45,8 @@ nav img {
 
 }
 
-#inputSearch > #searchBtn {
-    background-color: rgb(230, 211, 204);
+#searchBtn {
+    background-color: rgb(160, 55, 16);
     border-radius: 10px;
     padding: 5px;
     height: 40px;
@@ -71,37 +70,6 @@ input:placeholder-shown {
     font-weight: 500;
 
 }
-
-/* #allButton {
-     max-width: 100vw; 
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin-top: 20px;
-    margin-left: 20px;
-    column-gap: 10px;
-
-} */
-
-/* #allButton button {
-    border-radius: 20px;
-    background-color: transparent;
-    border: 2px solid #864daa;
-    height: 40px;
-    width: 100px;
-    text-align: center;
-
-} */
-/* 
-#allButton button #btnClicked {
-    background-color: #864daa;
-}
-
-#allButton button:hover {
-    background-color: #864daa;
-    border: 2px solid #dec9c9;
-
-} */
 
 #productList {
     margin-top: 40px;

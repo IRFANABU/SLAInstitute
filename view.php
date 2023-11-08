@@ -100,14 +100,12 @@ while($row = mysqli_fetch_assoc($result)){
         <span>Camera: '.$camera.'</span>
         <span>Price: '.$price.'</span>
         </div>
-        <div class="" laid="btnTab">
+        <div class="" id="btnTab">
         <button class="btn btn-primary" id="add to cart"><i class="fa fa-shopping-bag"></i>Add to Cart</button>
         <button class="btn btn-teriatary" id="buynow">Buy Now</button></div>
         </div>
         
     </div>
-    
-    
     </div>
     </div>';
 }
