@@ -12,11 +12,9 @@
 <link rel=stylesheet href="Styles/addproduct.css">
 </head>
 <?php 
-$errors='';
-
-
-
-
+require_once ('crud2.php');
+$errors="";
+$status="";
 ?>
 <body>
 
@@ -46,6 +44,7 @@ $errors='';
                 <option value="4">512 GB</option>
             </optgroup>
        </select>
+       <?php echo $status; ?>
        <Span class="text-danger"><?php echo $errors  ?></Span>
         </div>
         <div class="col-lg-4 col-md-12">

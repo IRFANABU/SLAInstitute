@@ -5,7 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    
 </head>
+
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.7.1.min.js"
     integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
@@ -13,6 +15,7 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 <link rel="stylesheet" href="Styles/viewproduct.css">
+
 <body>
 <div class="">
 
@@ -75,15 +78,18 @@ $sql = "select * from productdetails where id = '$product'";
 $result = $conn->query($sql);
 while($row = mysqli_fetch_assoc($result)){
     $modelname = $row['modelname'];
+    $image = $row['image'];
     $color = $row['color'];
     $storage = $row['storage'];
-    $camera = $row['camera'];
+    $camera = $row['cameraType'];
     $price = $row['price'];
     echo '<div class="container">
     <h1 class="bg-primary">PRODUCT</h1>
-    <button><i class="fa fa-arrow-left"></i>Back</button>
-    <div class="row p-4">
-    <div class="col-lg-7">image</div> 
+ 
+    <div class="row p-4" id="productDetailsRow">
+    <div class="col-lg-7 ">
+    <img src="data:image;charset=utf8;base64,'.base64_encode($image).'"class="rounded w-50 p-3"/>
+    </div> 
     <div class="col-lg-5 p-3 ">
     
        
@@ -103,14 +109,13 @@ while($row = mysqli_fetch_assoc($result)){
         <div class="" id="btnTab">
         <button class="btn btn-primary" id="add to cart"><i class="fa fa-shopping-bag"></i>Add to Cart</button>
         <button class="btn btn-teriatary" id="buynow">Buy Now</button></div>
-        </div>
-        
+        </div>  
     </div>
     </div>
     </div>';
 }
 ?>
-
+<script src="Script/viewProduct.js"></script>
 </body>
 </html>
 

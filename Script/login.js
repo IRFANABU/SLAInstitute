@@ -103,3 +103,4 @@ const crossEmail = (getData) => {
 //         if (input.attr("type") === "password")
 //             })
 // })
+

@@ -41,17 +41,17 @@
                 <div class="collapse navbar-collapse justify-content-center" id="subDiv">
                     <ul class="navbar-nav" id="head_ul">
                         <li class="nav-item me-1 my-3" id="item_li">
-                            <a href="index.php" class="nav-link">Home</a>
+                            <a href="index.php" class="nav-link" id="nava">Home</a>
 
                         </li>
                         <li class="nav-item me-1 my-3">
-                            <a href="about.php" class="nav-link">About Us</a>
+                            <a href="about.php" class="nav-link"id="nava">About Us</a>
                         </li>
                         <li class="nav-item me-1  my-3">
-                            <a href="contact.php" class="nav-link">Contact</a>
+                            <a href="contact.php" class="nav-link" id="nava">Contact</a>
                         </li>
                         <li class="nav-item me-1  my-3">
-                            <a href="cartPage.php" class="nav-link">Product</a>
+                            <a href="cartPage.php" class="nav-link" id="nava">Product</a>
                         </li>
                     </ul>
 
@@ -114,7 +114,7 @@
             
                             <div class="cardProduct">
                             <div class="imgContainer">
-                            <img src="data:image/jpeg;base64,' .base64_encode($imagep).'"/>
+                            <img src="data:image;charset=utf8;base64,<?php echo base64_encode($imagep); ?>"/>
                             </div>
                             <div  class="nameDiv">
                             <h4><?php echo $model?></h4>

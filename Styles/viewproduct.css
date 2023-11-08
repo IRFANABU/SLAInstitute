@@ -53,3 +53,8 @@ nav img {
 #btnTab > button{
     border-radius: 100px;
 }
+#productDetailsRow{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
