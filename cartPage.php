@@ -82,8 +82,7 @@
 
     <div id="inputSearch" class="d-flex justify-content-center">
 
-        <input type="search" name="searchProduct" id="searchProductData" class="text-center"
-            placeholder="Search your product.. ">
+        <input type="search" name="searchProduct" id="searchProductData" class="text-center" placeholder="Search your product.. ">
 
         <button id="searchBtn">Search</button>
 

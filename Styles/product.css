@@ -45,8 +45,8 @@ nav img {
 
 }
 
-#searchBtn {
-    background-color: rgb(160, 55, 16);
+#inputSearch  > #searchBtn {
+    background-color: rgb(136, 96, 81);
     border-radius: 10px;
     padding: 5px;
     height: 40px;

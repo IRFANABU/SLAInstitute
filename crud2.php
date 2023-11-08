@@ -24,7 +24,7 @@ class addproduct{
                     header('location:cartPage.php');
                 }
                 else{
-                        echo "failed to posted";
+                        echo '<span class="text-danger">Failed to posted</span>';
                 }
         
     } 
