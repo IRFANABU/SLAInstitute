@@ -169,6 +169,15 @@ display: none;
 background-color: #aa669a;
 color: #ffffff;
 }
+#ulData a{
+    text-decoration: none;
+}
+
+#carouselTab{
+    z-index: -1;
+    position: relative;
+}
+
 #videoSec button{
 padding: 0 40px 10px;
 text-align: justify;
