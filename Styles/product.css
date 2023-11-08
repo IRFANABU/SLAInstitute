@@ -43,7 +43,7 @@ nav img {
 
 }
 
-#inputSearch button {
+#inputSearch > #searchbtn {
     background-color: rgb(230, 211, 204);
     border-radius: 10px;
     padding: 5px;
