@@ -47,14 +47,13 @@ nav img {
 
 }
 
-#inputSearch #searchBtn {
+#inputSearch > #searchBtn {
     background-color: rgb(230, 211, 204);
     border-radius: 10px;
     padding: 5px;
     height: 40px;
     width: 100px;
-    transition: all;
-    transform: active;
+
 }
 
 #inputSearch input .error {
