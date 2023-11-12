@@ -37,15 +37,7 @@ nav img {
     box-shadow: 2px 4px 5px #2b252c;
     border-radius: 4px;
 }
-#colorTab{
-    font-weight:bold ;
-   
-}
-#cameraStorageTab{
-    display: flex;
-    
-    justify-content: space-between;
-}
+
 #btnTab{
     display: grid;
     gap: 5px;
@@ -53,8 +45,6 @@ nav img {
 #btnTab > button{
     border-radius: 100px;
 }
-#productDetailsRow{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+#contentright{
+    
 }

@@ -66,6 +66,10 @@
     </div>
 </nav>
 </div>
+
+
+
+
 <?php
 
 //  echo "Hello";
@@ -76,6 +80,8 @@ include ('server.php');
 $product = $_GET['product'];
 $sql = "select * from productdetails where id = '$product'";
 $result = $conn->query($sql);
+$tablerow = mysqli_num_rows($result);
+if($tablerow > 0){
 while($row = mysqli_fetch_assoc($result)){
     $modelname = $row['modelname'];
     $image = $row['image'];
@@ -83,37 +89,58 @@ while($row = mysqli_fetch_assoc($result)){
     $storage = $row['storage'];
     $camera = $row['cameraType'];
     $price = $row['price'];
-    echo '<div class="container">
-    <h1 class="bg-primary">PRODUCT</h1>
+    $ram = $row['ramType'];
+    ?>
+    <div class="container">
+    
  
-    <div class="row p-4" id="productDetailsRow">
-    <div class="col-lg-7 ">
-    <img src="data:image;charset=utf8;base64,'.base64_encode($image).'"class="rounded w-50 p-3"/>
-    </div> 
-    <div class="col-lg-5 p-3 ">
+        <div class="row p-4" id="productDetailsRow">
+        <div class="col-lg-6 p-5">
+        <img src="data:image;charset=utf8;base64,<?php echo base64_encode($image);?>"class="rounded w-100 p-5 bg-light"/>
+        </div> 
+        <div class="col-lg-6 p-5" id="contentright">
     
        
-        <div class="container bg-light p-5">
-        <div class="d-flex justify-content-between mb-3">
-        <span><b>'.$modelname.'</b></span>
-        <span class="">$<b>'.$price.'</b></span>
+        <div class="container" >
+           
+            <div>
+                <div class="fs-1">
+                <b><?php echo $modelname;?></b>
+             </div>
+             <div class="fs-5">
+                <span><?php echo $color ?></span>
+                <span>|</span>
+                <span><?php echo $storage ?></span>
+                <span>|</span>
+                <span><?php echo $ram ?></span>
+                </div>
+            </div>
         </div>
-        <div id="colorTab" class="mb-3">
-        <span>COLOR: <b>'.$color.'</b></span>
+        <div>
+            <div class="fs-3">
+                <?php echo "₹$price"; ?>
+            </div>
+            <div>
+                <?php echo "M.R.P. ₹ $price(include of all taxes)" ;?>
+            </div>
         </div>
-        <div class="mb-3" id="cameraStorageTab">
-        <span>Storage: '.$storage.'</span>
-        <span>Camera: '.$camera.'</span>
-        <span>Price: '.$price.'</span>
-        </div>
-        <div class="" id="btnTab">
-        <button class="btn btn-primary" id="add to cart"><i class="fa fa-shopping-bag"></i>Add to Cart</button>
-        <button class="btn btn-teriatary" id="buynow">Buy Now</button></div>
+        
+        <div class="my-3" id="btnTab">
+            <button class="btn btn-primary" id="add to cart"><i class="fa fa-shopping-bag"></i>Add to Cart</button>
+            <button class="btn btn-teriatary" id="buynow">Buy Now</button></div>
         </div>  
-    </div>
-    </div>
-    </div>';
+     </div>
+        </div>
+  </div>;
+<?php 
+
+} }
+
+else{
+    echo "<h1 class=text-center>No data Found</h1>";
 }
+
+
 ?>
 <script src="Script/viewProduct.js"></script>
 </body>

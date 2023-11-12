@@ -73,7 +73,11 @@
     <section id="image_sec">
         <div class=" container d-flex justify-content-between my-2 p-5">
         <h1 class="fs-1">SUPPORT</h1>
-        <input type="search" name="serach" id="searchcontact" class="form-serach w-25 fa fa-search" placeholder="Please enter your question">
+        <div class="search">
+        
+        <span class="fa fa-search position" id="searchIcon_support"></span>
+        <input type="search" name="search_support" id="search-support" class="form-search" placeholder="Please enter question">
+        </div>
         </div>
         <div class="container">
         <span class="fs-5 ">How can I help You ?</span>

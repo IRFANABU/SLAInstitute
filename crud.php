@@ -11,6 +11,7 @@ function insert_query(){
     $email = $_POST['email'];
     $pwd = $_POST['password'];
     $cpwd = $_POST['conformpassword'];
+   
     $sql = "Insert into registerform (`firstname`,`lastname`,`email`,`password`,`conformpassword`) values ('" .$firstname."','" .$lastname."','" .$email."','" .$pwd."','" .$cpwd."')";
    if( $conn->query($sql)===TRUE){
     echo "values submitted";

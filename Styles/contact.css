@@ -23,6 +23,20 @@ nav .menu{
     display: none;
     cursor: pointer;
 }
+.search{
+    display: inline-block;
+}
+
+#searchIcon_support {
+    position: absolute;
+    right: 310px;
+    top: 146px;
+}
+#search-support {
+
+text-indent: 32px;
+
+}
 
 #footerDown {
     background-image: dark
@@ -107,6 +121,23 @@ nav .menu{
     nav li{
         display:none;
 
+    }
+
+
+
+    .search{
+        display: inline-block;
+    }
+    
+    #searchIcon_support {
+        position: absolute;
+        right: 215px;
+        top: 160px;
+    }
+    #search-support {
+    
+    text-indent: 32px;
+    
     }
 
 

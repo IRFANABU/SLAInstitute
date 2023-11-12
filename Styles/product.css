@@ -71,27 +71,23 @@ input:placeholder-shown {
 
 }
 
+
 #productList {
     margin-top: 40px;
-    padding: 0 50px 0px;
     display: grid;
-    grid-template-columns: repeat(4, 300px);
+    padding: 20px 20px;
+    grid-template-columns: repeat(3, 200px);
     justify-content: center;
     align-items: center;
-    row-gap: 10px;
-    column-gap: 100px;
-
-
-
+    gap: 10px 70px;
 }
 
 
 .cardProduct {
     display: flex;
     flex-direction: column;
-
     align-items: center;
-    padding: 20px 10px 20px;
+    padding: 20px  ;
     border-radius: 5px;
     box-shadow: 3px 2px 10px rgb(188, 195, 195);
 }
@@ -108,15 +104,15 @@ input:placeholder-shown {
 
 .cardProduct .imgContainer img {
 
-    height: 100%;
-    width: 100%;
+    height: 0%;
+    max-width: 100%;
     transform: scale(0.5);
     object-fit: cover;
 
 
 }
 
-.cardProduct #buttonss {}
+
 
 .nameDiv h4 {
     /* margin-top: 20px; */
@@ -130,7 +126,33 @@ input:placeholder-shown {
     /* padding: 1px 40px 0px; */
 }
 
-.cardProduct .nameDiv {}
+#content-left{
+    border-right: #81818b 1px solid;
+
+}
+#navbarContent{
+    border-bottom: #81818b 1px solid;
+ 
+}
+
+#categoryList{
+
+ list-style: none;
+display: flex;
+justify-content: space-evenly;
+}
+#categoryList span{
+    display: grid;
+}
+#categoryList a {
+    text-decoration: none;
+    color: black;
+}
+
+
+#priceMin{
+    color: brown;
+}
 
 .cartBt {
     cursor: pointer;
@@ -171,6 +193,26 @@ input:placeholder-shown {
     border: rgb(239, 12, 12) 4px solid;
 }
 
+#footerDown {
+    background-image: dark;
+}
+#footerDown img{
+    max-width: 100px;
+   animation: rotate 4s infinite;
+}
+@keyframes rotate {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+    
+}
+
+#footerDown img {
+    transform: rotate(360deg);
+}
 @media (min-width:400px) and (max-width:720px) {
     #productList {
         display: grid;

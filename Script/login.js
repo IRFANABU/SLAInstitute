@@ -11,45 +11,36 @@ String.prototype.isEmail = function () {
     return !!this.match(/^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/);
 }
 
-formLogin.addEventListener("submit", (event) => {
-    event.preventDefault();
-    (!validateInput([email, password1]))
-    getDataEmail(email)
 
 
+function getInput(inputd) {
+    return inputd.id;
 
-})
+}
 
-function getDataEmail(givenEmailVal) {
-    // const formData = new FormData(formLogin)
-    // console.log([...formData])
-    fetchData();
-    async function fetchData() {
+function onError(input, messege) {
+    const parents = input.parentElement;
+    parents.className = "form-group error"
+    const msgEle = parents.querySelector('small');
+    msgEle.innerHTML = messege;
 
-        try {
-            const URL1 = "http://localhost:3000/Form";
-            const getEmailVal = await axios({
-                method: "GET",
-                url: URL1,
-                headers: { 'Content-Type': 'application/json' },
+}
 
-            })
+function onSuccess(input) {
 
-            console.log(givenEmailVal.value)
-            console.log(typeof getEmailVal.data)
-            // console.log(Object.keys(getEmailVal))    Object.values(getEmailVal)
+    const formgroup = input.parentElement;
+    formgroup.className = 'form-group success'
+    const msgEle = formgroup.querySelector('small');
+    msgEle.innerHTML = "";
+}
 
-            getEmailVal.forEach((item) => {
-                console.log(item)
-            })
-
-        }
-        catch (error) {
-            console.log("", error);
-        }
-
+function checkEmail(input){
+    if(!input.value.trim().isEmail()){
+        onError(input,"please Check it")
     }
-
+    else{
+        onSuccess(input)
+    }
 }
 
 
@@ -68,32 +59,54 @@ function validateInput(inputs) {
     })
 }
 
-function getInput(inputd) {
-    return inputd.id;
 
-}
+formLogin.addEventListener("submit", (event) => {
+    event.preventDefault();
+    validateInput([email, password1]);
+    checkEmail(email);
+    // fetchData(email);
 
-function onError(input, messege) {
-    const parents = input.parentElement;
-    parents.className = "form-group error"
-    let msgEle = parents.querySelector('small');
-    msgEle.innerText = messege;
+})
 
-}
 
-function onSuccess(input) {
 
-    let formgroup = input.parentElement;
-    formgroup.className = 'form-group success'
-    let msgEle = formgroup.querySelector('small');
-    msgEle.innerText = "";
-}
+const GetAll = [];  
 
-const crossEmail = (getData) => {
-    if (getData.data.email !== email.value) {
-        console.log("error")
-    }
-}
+    // async function fetchData() {
+    //     const formData = new FormData(formLogin) 
+    //     try {
+    //         const URL1 = "http://localhost:3001/Form";
+    //         const getVal = await axios({
+    //             method: "GET",
+    //             url: URL1,
+                
+    //         })
+    //         // console.log(Object.keys(getEmailVal))    Object.values(getEmailVal)
+    //         //    console.log(getVal.data);
+    //         //   console.log(Object.values(getVal))
+
+    //         console.log(getVal.data)
+            
+    //         getVal.data.map(user => {
+    //             if (user.email === formData.email && user.password === formData.password1) {
+    //                 alert("help");
+    //                 return false;
+    //             }
+    //             else {
+    //                 onError(email,"please check")
+    //                 onError(password1)
+    //             }
+    //         })
+
+
+    //     }
+    //     catch (error) {
+    //         console.log("", error);
+    //     }
+
+    // }
+
+
 
 
 // $(document).ready(function () {
