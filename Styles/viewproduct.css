@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-
->>>>>>> main
 * {
     box-sizing: border-box;
 
@@ -41,30 +37,13 @@ nav img {
     box-shadow: 2px 4px 5px #2b252c;
     border-radius: 4px;
 }
-<<<<<<< HEAD
-
-=======
-#colorTab{
-    font-weight:bold ;
-   
-}
-#cameraStorageTab{
-    display: flex;
-    
-    justify-content: space-between;
-}
->>>>>>> main
 #btnTab{
     display: grid;
     gap: 5px;
 }
 #btnTab > button{
     border-radius: 100px;
-<<<<<<< HEAD
 }
 #contentright{
     
 }
-=======
-}
->>>>>>> main

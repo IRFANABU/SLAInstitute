@@ -15,15 +15,7 @@ nav {
     display: grid;
 }
 
-<<<<<<< HEAD
 #nava:hover {
-=======
-nav #user{
-    display: inline-flex;
-}
-
-#head_ul a:hover {
->>>>>>> main
     border-radius: 3px;
     background-color: white;
 
@@ -33,13 +25,9 @@ nav .menu {
     display: none;
     cursor: pointer;
 }
-<<<<<<< HEAD
 #user{
     display: inline-flex;
 }
-=======
-
->>>>>>> main
 
 nav img {
     max-width: 200px;
@@ -57,21 +45,12 @@ nav img {
 
 }
 
-<<<<<<< HEAD
 #inputSearch  > #searchBtn {
     background-color: rgb(136, 96, 81);
-=======
-#inputSearch > #searchBtn {
-    background-color: rgb(230, 211, 204);
->>>>>>> main
     border-radius: 10px;
     padding: 5px;
     height: 40px;
     width: 100px;
-<<<<<<< HEAD
-=======
-
->>>>>>> main
 }
 
 #inputSearch input .error {
@@ -85,10 +64,6 @@ nav img {
 
 }
 
-<<<<<<< HEAD
-=======
-
->>>>>>> main
 input:placeholder-shown {
 
     text-align: center;
@@ -99,7 +74,6 @@ input:placeholder-shown {
 
 #productList {
     margin-top: 40px;
-<<<<<<< HEAD
     display: grid;
     padding: 20px 20px;
     grid-template-columns: repeat(3, 200px);
@@ -109,27 +83,11 @@ input:placeholder-shown {
 }
 
 
-=======
-    padding: 0 50px 0px;
-    display: grid;
-    
-    grid-template-columns: repeat(4, 300px);
-    justify-content: center;
-    align-items: center;
-    row-gap: 10px;
-    column-gap: 100px;
-}
-
->>>>>>> main
 .cardProduct {
     display: flex;
     flex-direction: column;
     align-items: center;
-<<<<<<< HEAD
     padding: 20px  ;
-=======
-    padding: 20px 10px 20px;
->>>>>>> main
     border-radius: 5px;
     box-shadow: 3px 2px 10px rgb(188, 195, 195);
 }
@@ -146,13 +104,8 @@ input:placeholder-shown {
 
 .cardProduct .imgContainer img {
 
-<<<<<<< HEAD
     height: 0%;
     max-width: 100%;
-=======
-    height: 100%;
-    width: 100%;
->>>>>>> main
     transform: scale(0.5);
     object-fit: cover;
 
@@ -162,11 +115,7 @@ input:placeholder-shown {
 
 
 .nameDiv h4 {
-<<<<<<< HEAD
     /* margin-top: 20px; */
-=======
-    
->>>>>>> main
     margin-bottom: 40px;
     font-size: medium;
     text-align: center;
@@ -174,7 +123,6 @@ input:placeholder-shown {
     color: rgb(0, 0, 0);
     border-top: #a991b8 2px solid;
     border-bottom: #a991b8 2px solid;
-<<<<<<< HEAD
     /* padding: 1px 40px 0px; */
 }
 
@@ -205,11 +153,6 @@ justify-content: space-evenly;
 #priceMin{
     color: brown;
 }
-=======
-    
-}
-
->>>>>>> main
 
 .cartBt {
     cursor: pointer;
@@ -250,7 +193,6 @@ justify-content: space-evenly;
     border: rgb(239, 12, 12) 4px solid;
 }
 
-<<<<<<< HEAD
 #footerDown {
     background-image: dark;
 }
@@ -271,8 +213,6 @@ justify-content: space-evenly;
 #footerDown img {
     transform: rotate(360deg);
 }
-=======
->>>>>>> main
 @media (min-width:400px) and (max-width:720px) {
     #productList {
         display: grid;
@@ -286,7 +226,6 @@ justify-content: space-evenly;
         width: 75%;
     }
 
-<<<<<<< HEAD
     .cardProduct {}
 
     #user {
@@ -294,8 +233,6 @@ justify-content: space-evenly;
     }
 
 
-=======
->>>>>>> main
     nav .menu {
         padding: 20px;
         display: block;
@@ -306,12 +243,6 @@ justify-content: space-evenly;
 
 
     }
-<<<<<<< HEAD
-=======
-    nav #user{
-        display: none;
-    }
->>>>>>> main
 
     nav .title {
         max-width: 150px;
