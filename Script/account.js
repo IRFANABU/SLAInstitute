@@ -13,7 +13,6 @@ form.addEventListener("submit", function (event) {
         event.preventDefault();
     }
     else {
-<<<<<<< HEAD
     const formRdata = new FormData(form);
     const url= "http://localhost:3001/Form";
     axios.post(url, formRdata, {
@@ -30,10 +29,6 @@ form.addEventListener("submit", function (event) {
          
     }).catch(err => { console.log(err) })
           
-=======
-        // postData();
-        alert("register Suucessfully")       
->>>>>>> main
     }
 
 })

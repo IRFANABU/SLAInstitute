@@ -163,50 +163,29 @@ top: 100px;
 }
 
 #ulData{
-<<<<<<< HEAD
-    
-display: none;
-=======
 display: none;
 z-index: 99;
 position: absolute;
 padding-right: 100px;
 max-width: 200px;
->>>>>>> main
 }
 #ulData :hover{
 background-color: #aa669a;
 color: #ffffff;
-<<<<<<< HEAD
-}
-#ulData a{
-    text-decoration: none;
-}
-
-#carouselTab{
-    z-index: -1;
-    position: relative;
-}
-
-=======
 
 }
 #ulData a{
     text-decoration: none;
    
 }
->>>>>>> main
 #videoSec button{
 padding: 0 40px 10px;
 text-align: justify;
 }
-<<<<<<< HEAD
-=======
 #carouselTab{
     position: relative;
     z-index: -1;
 }
->>>>>>> main
 
  @media screen and (min-width:400px) and (max-width:720px){
   
