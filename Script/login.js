@@ -10,6 +10,38 @@ const smallerror = document.querySelector('small');
 String.prototype.isEmail = function () {
     return !!this.match(/^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/);
 }
+<<<<<<< HEAD
+
+
+
+function getInput(inputd) {
+    return inputd.id;
+
+}
+
+function onError(input, messege) {
+    const parents = input.parentElement;
+    parents.className = "form-group error"
+    const msgEle = parents.querySelector('small');
+    msgEle.innerHTML = messege;
+
+}
+
+function onSuccess(input) {
+
+    const formgroup = input.parentElement;
+    formgroup.className = 'form-group success'
+    const msgEle = formgroup.querySelector('small');
+    msgEle.innerHTML = "";
+}
+
+function checkEmail(input){
+    if(!input.value.trim().isEmail()){
+        onError(input,"please Check it")
+    }
+    else{
+        onSuccess(input)
+=======
 const validateEmail = (getEmail) => {
     if (!getEmail.value.trim().isEmail()) {
         onError(getEmail, "Invalid Emaild Address");
@@ -18,6 +50,7 @@ const validateEmail = (getEmail) => {
     else {
         onSuccess(getEmail);
         return true;
+>>>>>>> main
     }
 }
 
@@ -30,13 +63,69 @@ function validateInput(inputs) {
 
         }
         else {
+<<<<<<< HEAD
+            onSuccess(inputsData)
+=======
             onSuccess(inputsData);
+>>>>>>> main
 
         }
 
     })
 }
 
+<<<<<<< HEAD
+
+formLogin.addEventListener("submit", (event) => {
+    event.preventDefault();
+    validateInput([email, password1]);
+    checkEmail(email);
+    // fetchData(email);
+
+})
+
+
+
+const GetAll = [];  
+
+    // async function fetchData() {
+    //     const formData = new FormData(formLogin) 
+    //     try {
+    //         const URL1 = "http://localhost:3001/Form";
+    //         const getVal = await axios({
+    //             method: "GET",
+    //             url: URL1,
+                
+    //         })
+    //         // console.log(Object.keys(getEmailVal))    Object.values(getEmailVal)
+    //         //    console.log(getVal.data);
+    //         //   console.log(Object.values(getVal))
+
+    //         console.log(getVal.data)
+            
+    //         getVal.data.map(user => {
+    //             if (user.email === formData.email && user.password === formData.password1) {
+    //                 alert("help");
+    //                 return false;
+    //             }
+    //             else {
+    //                 onError(email,"please check")
+    //                 onError(password1)
+    //             }
+    //         })
+
+
+    //     }
+    //     catch (error) {
+    //         console.log("", error);
+    //     }
+
+    // }
+
+
+
+
+=======
 function getInput(inputd) {
     return inputd.id;
 
@@ -66,6 +155,7 @@ formLogin.addEventListener("submit", (event) => {
     (!validateEmail(email));
 })
 
+>>>>>>> main
 // $(document).ready(function () {
 //     $(".fa-eye").click(function () {
 //         $(this).toggleClass
@@ -74,6 +164,8 @@ formLogin.addEventListener("submit", (event) => {
 //             })
 // })
 
+<<<<<<< HEAD
+=======
 
 function getDataEmail(givenEmailVal) {
     // const formData = new FormData(formLogin)
@@ -106,3 +198,4 @@ function getDataEmail(givenEmailVal) {
     }
 
 }
+>>>>>>> main

@@ -15,11 +15,15 @@ nav {
     display: grid;
 }
 
+<<<<<<< HEAD
+#nava:hover {
+=======
 nav #user{
     display: inline-flex;
 }
 
 #head_ul a:hover {
+>>>>>>> main
     border-radius: 3px;
     background-color: white;
 
@@ -29,7 +33,13 @@ nav .menu {
     display: none;
     cursor: pointer;
 }
+<<<<<<< HEAD
+#user{
+    display: inline-flex;
+}
+=======
 
+>>>>>>> main
 
 nav img {
     max-width: 200px;
@@ -47,13 +57,21 @@ nav img {
 
 }
 
+<<<<<<< HEAD
+#inputSearch  > #searchBtn {
+    background-color: rgb(136, 96, 81);
+=======
 #inputSearch > #searchBtn {
     background-color: rgb(230, 211, 204);
+>>>>>>> main
     border-radius: 10px;
     padding: 5px;
     height: 40px;
     width: 100px;
+<<<<<<< HEAD
+=======
 
+>>>>>>> main
 }
 
 #inputSearch input .error {
@@ -67,7 +85,10 @@ nav img {
 
 }
 
+<<<<<<< HEAD
+=======
 
+>>>>>>> main
 input:placeholder-shown {
 
     text-align: center;
@@ -78,6 +99,17 @@ input:placeholder-shown {
 
 #productList {
     margin-top: 40px;
+<<<<<<< HEAD
+    display: grid;
+    padding: 20px 20px;
+    grid-template-columns: repeat(3, 200px);
+    justify-content: center;
+    align-items: center;
+    gap: 10px 70px;
+}
+
+
+=======
     padding: 0 50px 0px;
     display: grid;
     
@@ -88,11 +120,16 @@ input:placeholder-shown {
     column-gap: 100px;
 }
 
+>>>>>>> main
 .cardProduct {
     display: flex;
     flex-direction: column;
     align-items: center;
+<<<<<<< HEAD
+    padding: 20px  ;
+=======
     padding: 20px 10px 20px;
+>>>>>>> main
     border-radius: 5px;
     box-shadow: 3px 2px 10px rgb(188, 195, 195);
 }
@@ -109,8 +146,13 @@ input:placeholder-shown {
 
 .cardProduct .imgContainer img {
 
+<<<<<<< HEAD
+    height: 0%;
+    max-width: 100%;
+=======
     height: 100%;
     width: 100%;
+>>>>>>> main
     transform: scale(0.5);
     object-fit: cover;
 
@@ -120,7 +162,11 @@ input:placeholder-shown {
 
 
 .nameDiv h4 {
+<<<<<<< HEAD
+    /* margin-top: 20px; */
+=======
     
+>>>>>>> main
     margin-bottom: 40px;
     font-size: medium;
     text-align: center;
@@ -128,9 +174,42 @@ input:placeholder-shown {
     color: rgb(0, 0, 0);
     border-top: #a991b8 2px solid;
     border-bottom: #a991b8 2px solid;
+<<<<<<< HEAD
+    /* padding: 1px 40px 0px; */
+}
+
+#content-left{
+    border-right: #81818b 1px solid;
+
+}
+#navbarContent{
+    border-bottom: #81818b 1px solid;
+ 
+}
+
+#categoryList{
+
+ list-style: none;
+display: flex;
+justify-content: space-evenly;
+}
+#categoryList span{
+    display: grid;
+}
+#categoryList a {
+    text-decoration: none;
+    color: black;
+}
+
+
+#priceMin{
+    color: brown;
+}
+=======
     
 }
 
+>>>>>>> main
 
 .cartBt {
     cursor: pointer;
@@ -171,6 +250,29 @@ input:placeholder-shown {
     border: rgb(239, 12, 12) 4px solid;
 }
 
+<<<<<<< HEAD
+#footerDown {
+    background-image: dark;
+}
+#footerDown img{
+    max-width: 100px;
+   animation: rotate 4s infinite;
+}
+@keyframes rotate {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+    
+}
+
+#footerDown img {
+    transform: rotate(360deg);
+}
+=======
+>>>>>>> main
 @media (min-width:400px) and (max-width:720px) {
     #productList {
         display: grid;
@@ -184,6 +286,16 @@ input:placeholder-shown {
         width: 75%;
     }
 
+<<<<<<< HEAD
+    .cardProduct {}
+
+    #user {
+        display: none;
+    }
+
+
+=======
+>>>>>>> main
     nav .menu {
         padding: 20px;
         display: block;
@@ -194,9 +306,12 @@ input:placeholder-shown {
 
 
     }
+<<<<<<< HEAD
+=======
     nav #user{
         display: none;
     }
+>>>>>>> main
 
     nav .title {
         max-width: 150px;

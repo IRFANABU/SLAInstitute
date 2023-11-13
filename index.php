@@ -161,6 +161,9 @@
 </nav>
 </div>
 
+<<<<<<< HEAD
+</section>
+=======
 
 
 
@@ -197,6 +200,7 @@
             </form>
         </div>
     </section> -->
+>>>>>>> main
     <div class="container-fluid">
         <div class="container w-75">
             <h2 class="text-gray text-uppercase text-center lh-lg mb-5">Contact Mobile PlatForm Support Team</h2>

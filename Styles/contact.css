@@ -23,6 +23,23 @@ nav .menu{
     display: none;
     cursor: pointer;
 }
+<<<<<<< HEAD
+.search{
+    display: inline-block;
+}
+
+#searchIcon_support {
+    position: absolute;
+    right: 310px;
+    top: 146px;
+}
+#search-support {
+
+text-indent: 32px;
+
+}
+=======
+>>>>>>> main
 
 #footerDown {
     background-image: dark
@@ -48,7 +65,11 @@ nav .menu{
     position: fixed;
     width: 100vw;
     display: none;
+<<<<<<< HEAD
+    background-color: transparent;
+=======
     background-image: url("image/darkFooter.jpg");
+>>>>>>> main
 }
 #xFont{
    
@@ -70,8 +91,11 @@ nav .menu{
   nav .user{
     display: inline-flex;
   }
+<<<<<<< HEAD
+=======
 
  
+>>>>>>> main
  
 
 
@@ -112,6 +136,26 @@ nav .menu{
     }
 
 
+<<<<<<< HEAD
+
+    .search{
+        display: inline-block;
+    }
+    
+    #searchIcon_support {
+        position: absolute;
+        right: 215px;
+        top: 160px;
+    }
+    #search-support {
+    
+    text-indent: 32px;
+    
+    }
+
+
+=======
+>>>>>>> main
     #footerDown img{
         position: relative;
        top: 20px;

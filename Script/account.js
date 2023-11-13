@@ -13,8 +13,27 @@ form.addEventListener("submit", function (event) {
         event.preventDefault();
     }
     else {
+<<<<<<< HEAD
+    const formRdata = new FormData(form);
+    const url= "http://localhost:3001/Form";
+    axios.post(url, formRdata, {
+        body: formRdata,
+        headers: {
+            "Content-Type": "application/json",
+            "Accept-Type":"application/json"
+        }
+    }).then(result => {
+ 
+        console.log(result)
+        console.log([...formRdata])
+        alert("register Suucessfully") ; 
+         
+    }).catch(err => { console.log(err) })
+          
+=======
         // postData();
         alert("register Suucessfully")       
+>>>>>>> main
     }
 
 })

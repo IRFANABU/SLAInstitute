@@ -1,4 +1,48 @@
 {
+<<<<<<< HEAD
+    "products":
+        [
+    
+            {
+                "model":"Iphone 11 Pro",
+                "color":"Black",
+                "storage":"128GB",
+                "ram":"12GB",
+                "camera":"48MP",
+                "processor":"A14 Bionic Chip",
+                "price":"64,000.0"
+               
+            },{
+                "model":"Iphone 12 Pro",
+                "color":"Black",
+                "storage":"128GB",
+                "ram":"12GB",
+                "camera":"16MP",
+                "processor":"A14 Bionic Chip",
+                "price":"64,000.00"
+               
+            },{
+                "model":"Iphone 13 Pro",
+                "color":"Black",
+                "storage":"128GB",
+                "ram":"8GB",
+                "camera":"48MP",
+                "processor":"A14 Bionic Chip",
+                "price":"64,000.0"
+               
+            },{
+                "model":"Iphone 14 ",
+                "color":"Black",
+                "storage":"256GB",
+                "ram":"4GB",
+                "camera":"48MP",
+                "processor":"A14 Bionic Chip",
+                "price":"64,000.0"
+               
+            }
+        ]
+        
+=======
     "productData" :[
         {
             "id": 1,
@@ -140,6 +184,7 @@
     
     
     ]
+>>>>>>> main
 
     
 }

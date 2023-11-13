@@ -1,0 +1,49 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "Form": [
+    {
+      "id": 1,
+      "name": "typicode"
+    },
+    {
+      "firstname": "Mohamed",
+      "lastname": "Irfan",
+      "email": "Irfan10942@gmail.com",
+      "password": "a",
+      "conformpassword": "a",
+      "id": 2
+    },
+    {
+      "firstname": "Mohamed",
+      "lastname": "Irfan",
+      "email": "Irfan10942@gmail.com",
+      "password": "a",
+      "conformpassword": "a",
+      "id": 3
+    },
+    {
+      "firstname": "qa",
+      "lastname": "qa",
+      "email": "Irfan10942@gmail.com",
+      "password": "a",
+      "conformpassword": "a",
+      "id": 4
+    }
+  ]
+}
