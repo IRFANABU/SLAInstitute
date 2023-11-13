@@ -41,7 +41,8 @@
             }
         ],
         
-    "productData" :[
+    "productData" :
+    [
         {
             "id": 1,
             "image": "image/iphone images/apple-iphone-11-1.jpg",
