@@ -161,7 +161,46 @@
 </nav>
 </div>
 
+<<<<<<< HEAD
 </section>
+=======
+
+
+
+
+
+</section>
+
+    <!-- <section class="hiddenUser ">
+        <div class="container d-flex justify-content-center" >
+            <form action="" id="popup"  class="">
+                <div class="bg-light">
+                    <div class="header ">
+                        <div class="text-center">
+                            <img src="image/logos.png" class="w-25 imageslogo" alt="">
+                        </div>
+                        <div class="text-center">
+                            <h3>Sign up or log in</h3>
+                            <p>Continue with Facebook, Google or email. If you don't have an account yet, one will be created.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="FooterContent">
+                    <a href="" id="icon"><i class="fa fa-facebook facebook me-2"></i>Continue to Facebook</a>
+                    <a href="" id="icon"> <i class="fa fa-envelope envelope me-2"></i>Continue to Mail</a>
+                    <a href="" id="icon"><i class="fa fa-google google me-2"></i>Continue to Google</a>
+                    <a href="">haven't recieve your conformation Email?</a>
+                    <div class="footer">
+                        <div class="Term">
+                            <a href=""> Terms of Use</a>
+                            <a href="">Privacy Policy</a>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section> -->
+>>>>>>> main
     <div class="container-fluid">
         <div class="container w-75">
             <h2 class="text-gray text-uppercase text-center lh-lg mb-5">Contact Mobile PlatForm Support Team</h2>
