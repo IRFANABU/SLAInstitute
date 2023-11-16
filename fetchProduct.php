@@ -22,7 +22,7 @@ $output = '';
     
   echo $output = '
   <div class="cardProduct">
-  <form method="post" action="delete.php">
+  
   <div class="ms-auto my-2">
   </div>
      <div class="imgContainer">
@@ -32,9 +32,10 @@ $output = '';
          <h4>'.$row->modelname.'</h4>
      </div>
      <div id="buttonss">
-         <button id=ViewBtn class="btn btn-primary"><a href="view.php?product='.$row->id.'" class="text-white text-decoration-none">View Product</a></button>
+            
+         <button id=ViewBtn class="btn btn-primary" name="DeleteProduct" type="submit"><a href="view.php?product='.$row->id.'" class="text-white text-decoration-none">View Product</a></button>
      </div>
-    </form>
+    
  </div>';
     
  

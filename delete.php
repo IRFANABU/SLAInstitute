@@ -2,21 +2,24 @@
 
             include('server.php');
           
-            if(isset($_POST['DeleteProduct']))
+            if(isset($_GET['delete']))
             {
-                $productid = $_GET['checkit'];
+                $productid = $_GET['delete'];
                 echo $productid;
-                for($i=0; $i<count($productid); $i++)
-                {
-                    $delID = $productid[$i];
-                $sql = "delete from productdetails where id = '$delID'";
+                // for($i=0; $i<count($productid); $i++)
+                // {
+                    // $delID = $productid[$i];
+                
+                // }
+                $sql = "delete from productdetails where id = '$productid'";
                 $result = $conn->query($sql);
-                }
                 if($result){
                     echo 'suucess';
+                    header('location:cartPage.php');
+
                 }
                 else{
-                    die("something error" .$mysql->connect_error());
+                    die("something error" .mysqli_error($conn));
                 }
             
             }

@@ -156,7 +156,7 @@
 <nav class="nav nav-pills nav-fill">
   <a class="nav-link active" aria-current="page" href="#">Mobiles</a>
   <a class="nav-link" href="#">Smart Watch</a>
-  <a class="nav-link" href="#">Link</a>
+  <a class="nav-link" href="#">Iphones</a>
   <a class="nav-link disabled" aria-disabled="true">Disabled</a>
 </nav>
 </div>

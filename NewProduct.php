@@ -124,8 +124,8 @@ nav img {
     <div class="col-lg-4 p-3">
        <button class="btn btn-primary" id="AddProduct"><a href="addProduct.php" class="text-white text-decoration-none">Add Product</a></button>
     </div> 
-       <div class="table-responsive-md p-4 border">
-       <table class="table " id="ProductTable">
+       <div class="table-responsive-md p-5 border">
+       <table class="table table-striped" id="ProductTable">
             <thead >
                 <tr class="bg-primary">
                 <th>SL.NO</th>
@@ -163,12 +163,13 @@ nav img {
                 <td>'.$camera.'</td>
                 <td>'.$ram.'</td>
                 <td>
-                <div>
-                <button class = "btn btn-danger">Delete</button>
-                <button class = "btn btn-info">Edit</button>
-                </div></td>
+                <div class="">
+                <button class ="btn btn-danger" type="submit" name="DeleteProduct"><a href="delete.php?delete='.$productID.'" class="text-white text-decoration-none">Delete</a></button>
+                <button class ="btn btn-info">Edit</button>
+                </div>
+                </td>
                 
-            </tr>';
+                </tr>';
             }}
             ?>
 
