@@ -82,10 +82,14 @@
 
         <div class="span">
             <span id="errorSpan" class="span"></span>
-        </div> --> 
+        </div> -->
+        <div class="d-flex ms-auto">
+        
         <div class="ms-auto p-3">
-            <button class="btn btn-primary" id="AddProduct"><a href="addProduct.php" class="text-white text-decoration-none">Add Product</a></button>
+            <button class="btn btn-primary" id="AddProduct"><a href="NewProduct.php" class="text-white text-decoration-none">Add Product</a></button>
         </div>
+        </div>
+      
     </div>
 
         <hr>
@@ -206,8 +210,8 @@
                 
 
 
-           
-
+                            <!-- <span>Json Data and Fetch data from MySql</span> -->
+                            
           
        
                         

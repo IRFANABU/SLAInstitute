@@ -64,6 +64,7 @@
         <div class="mb-3 col-lg-6">
         <label for="price">Price</label>
         <input type="number" class="form-control" name="price">
+        
         </div>
         <div class="col-lg-6 col-md-12">
         <button type="submit" name="addProduct" class="btn btn-dark w-50" id="AddBtn">Add</button>

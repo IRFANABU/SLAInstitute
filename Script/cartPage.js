@@ -1,6 +1,6 @@
 
 const getProduct = [];
-window.addEventListener("load", async () => {
+window.addEventListener("DOMContentLoaded", async () => {
     try {
         const aswait = fetch("Product.json").then(res =>
             res.json()).then(datas => {
@@ -77,32 +77,32 @@ function data(productData) {
 // ==========================serach product data==============================================//
 
 
-var searchButton = document.getElementById('searchBtn');
+// var searchButton = document.getElementById('searchBtn');
 
-searchButton.addEventListener("click", () => {
-    const searchInput = document.getElementById('searchProductData').value;
-    const products = document.querySelectorAll('.cardProduct')
-    const productName = document.querySelectorAll('.h4')
-    const errorsSpan = document.getElementById('errorSpan');;
-    productName.forEach((item, index) => {
-        (item.innerText.includes(searchInput.toUpperCase())) ? (products[index].classList.remove("hide"),
-            products[index].classList.add('visible')) : products[index].classList.add("hide");
-
-
-    })
-})
+// searchButton.addEventListener("click", () => {
+//     const searchInput = document.getElementById('searchProductData').value;
+//     const products = document.querySelectorAll('.cardProduct')
+//     const productName = document.querySelectorAll('.h4')
+//     const errorsSpan = document.getElementById('errorSpan');;
+//     productName.forEach((item, index) => {
+//         (item.innerText.includes(searchInput.toUpperCase())) ? (products[index].classList.remove("hide"),
+//             products[index].classList.add('visible')) : products[index].classList.add("hide");
 
 
-function onError(input, message) {
-    const searchInput = document.getElementById('searchProductData')
-    var parent = input.parentElement;
-    parent.classList.add('error')
-}
-function onSuccess(input, message) {
-    const searchInput = document.getElementById('searchProductData')
-    var input = searchInput;
-    input.classList.remove('inputActive')
-}
+//     })
+// })
+
+
+// function onError(input, message) {
+//     const searchInput = document.getElementById('searchProductData')
+//     var parent = input.parentElement;
+//     parent.classList.add('error')
+// }
+// function onSuccess(input, message) {
+//     const searchInput = document.getElementById('searchProductData')
+//     var input = searchInput;
+//     input.classList.remove('inputActive')
+// }
 
 const spanMenuIcon = document.getElementById('icon');
 const listItem1 = document.querySelectorAll('nav li');

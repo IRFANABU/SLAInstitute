@@ -22,6 +22,9 @@ $output = '';
     
   echo $output = '
   <div class="cardProduct">
+  <form method="post" action="delete.php">
+  <div class="ms-auto my-2">
+  </div>
      <div class="imgContainer">
           <img src="data:image;charset=utf8;base64,'.base64_encode($row->image).'"/>
      </div>
@@ -29,16 +32,22 @@ $output = '';
          <h4>'.$row->modelname.'</h4>
      </div>
      <div id="buttonss">
-         <button id=ViewBtn class="btn btn-primary"><a href="view.php?product='.$row->id. '" class="text-white text-decoration-none">View Product</a></button>
+         <button id=ViewBtn class="btn btn-primary"><a href="view.php?product='.$row->id.'" class="text-white text-decoration-none">View Product</a></button>
      </div>
+    </form>
  </div>';
     
-    
-}  
+ 
     
     
 }
-
+// echo $output = '
+ 
+//  <button class="btn btn-danger" type="submit" id="deleteProduct" name="DeleteProduct"><a href="delete.php" class="text-white text-decoration-none">Delete</a></button>
+ 
+//  ';
+    
+}  
 else{
       echo $output = "<h2  style=text-align:center>No Data Found </h2>";
 } 
