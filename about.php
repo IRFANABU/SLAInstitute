@@ -33,7 +33,7 @@
                 <div class="collapse navbar-collapse justify-content-center">
                     <ul class="navbar-nav " id="head_ul">
                         <li class="nav-item me-1 my-3" id="item_li">
-                            <a href="index.php" class="nav-link">Home</a>
+                            <a href="home2.php" class="nav-link">Home</a>
                             
                         </li>
                         <li class="nav-item me-1 my-3">

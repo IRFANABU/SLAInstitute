@@ -82,7 +82,7 @@ nav img {
         <div class="collapse navbar-collapse justify-content-center" id="subDiv">
             <ul class="navbar-nav" id="head_ul">
                 <li class="nav-item me-1 my-3" id="item_li">
-                    <a href="index.php" class="nav-link" id="nava">Home</a>
+                    <a href="test2.php" class="nav-link" id="nava">Home</a>
 
                 </li>
                 <li class="nav-item me-1 my-3">

@@ -34,14 +34,14 @@ function onSuccess(input) {
     msgEle.innerHTML = "";
 }
 
-function checkEmail(input){
-    if(!input.value.trim().isEmail()){
-        onError(input,"please Check it")
-    }
-    else{
-        onSuccess(input)
-    }
-}
+// function checkEmail(input){
+//     if(!input.value.trim().isEmail()){
+//         onError(input,"please Check it")
+//     }
+//     else{
+//         onSuccess(input)
+//     }
+// }
 
 
 function validateInput(inputs) {
@@ -52,7 +52,7 @@ function validateInput(inputs) {
 
         }
         else {
-            onSuccess(inputsData)
+            onSuccess(inputsData);
 
         }
 
@@ -63,7 +63,7 @@ function validateInput(inputs) {
 formLogin.addEventListener("submit", (event) => {
     event.preventDefault();
     validateInput([email, password1]);
-    checkEmail(email);
+    // checkEmail(email);
     // fetchData(email);
 
 })

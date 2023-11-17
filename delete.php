@@ -15,6 +15,7 @@
                 $result = $conn->query($sql);
                 if($result){
                     echo 'suucess';
+                    
                     header('location:cartPage.php');
 
                 }

@@ -157,9 +157,9 @@ font-size: 20px;
 .ulSign{
 list-style-type: none;
 position: absolute;
-left: calc(100% - 7%);
-top: 100px;
-
+left: calc(100% - 8%);
+top: 80px;
+max-width: 400px;
 }
 
 #ulData{
@@ -167,10 +167,10 @@ display: none;
 z-index: 99;
 position: absolute;
 padding-right: 100px;
-max-width: 200px;
+max-width: 300px;
 }
 #ulData :hover{
-background-color: #aa669a;
+background-color: #53607a;
 color: #ffffff;
 
 }
@@ -261,6 +261,16 @@ text-align: justify;
  }
 
  @media screen and (min-width:721px) and (max-width:990px){
+
+    .ulSign{
+        list-style-type: none;
+        position: absolute;
+        left: calc(100% - 16%);
+        top: 80px;
+        max-width: 400px;
+        }
+        
+
     #videoSec > .container {
        
        width:100%;

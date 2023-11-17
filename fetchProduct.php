@@ -25,9 +25,11 @@ $output = '';
   
   <div class="ms-auto my-2">
   </div>
-     <div class="imgContainer">
+
+     <figure class="imgContainer">
           <img src="data:image;charset=utf8;base64,'.base64_encode($row->image).'"/>
-     </div>
+    </figure>
+
      <div  class="nameDiv">
          <h4>'.$row->modelname.'</h4>
      </div>

@@ -19,7 +19,7 @@ form.addEventListener("submit", function (event) {
         body: formRdata,
         headers: {
             "Content-Type": "application/json",
-            "Accept-Type":"application/json"
+            // "Accept-Type":"application/json"
         }
     }).then(result => {
  
@@ -54,24 +54,27 @@ function validateInputs() {
         onError(password, "Password is required")
         success = false;
     }
+    else if(password.value.length < 8){
+        onError(password, "Password length must be 8 charcters")
+        success = false;
+    }
     else {
-        onSuccess(password)
+        onSuccess(password);
     }
 
     if (password2.value.trim() == '') {
         onError(password2, "Password is required")
+        success = false;
+    }
+    else if(password2.value.trim() !== password.value.trim()){
+        onError(password2, "passsword is not match")
+        success = false;
 
     }
+
     else {
-
-        if (password2.value.trim() !== password.value.trim()) {
-            onError(password2, "passsword is not match")
-            success = false;
-        }
-        else {
-            onSuccess(password2)
-        }
-
+            onSuccess(password2);
+    
     }
     
     return success;

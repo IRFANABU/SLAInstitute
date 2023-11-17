@@ -1,32 +1,30 @@
+<?php  
+  
+session_start();
+
+?>
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact</title>
+    <title>Document</title>
 </head>
-<style>
-    
-
- 
-</style>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
     integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
-<link rel= stylesheet href="Styles/contact.css">
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>    
+<link rel = stylesheet href="Styles/home.css">
 <body>
     <div>
         <nav class="navbar navbar-expand" id="head_nav">
             <div class="container" id="insideDiv">
                 <div class="title">
                     <img src="image/logos.png" class=" w-25 object-fit-contain my-2" alt="">
-               
                 </div>
             
                
@@ -58,36 +56,122 @@
                     <i class="fa fa-bell me-3"></i>
 
                 </div>
-                <div>
-   
-                    <i class="text-small fa fa-user" id="userIcon"></i>
+                <div>   
+                   <!-- <a href="login.html" style="  color: black;"><i class="text-small fa fa-user " id="userIcon"></i></a></select> -->
+                   <i class="fa fa-user" id="ulList"  aria-hidden="true"></i>
+                    <div class="ulSign me-2 " >
+                        
+                        <ul class="list-group p-1 me-2 grid" id="ulData">
+                            <li  class="list-group-item"><span class=""><?php  echo $_SESSION['username']; ?></span></li>
+                            <li class="list-group-item "><a href="index.php" style="color: rgb(170, 52, 52);" ><i class="text-small " id="userIcon"></i>Login</a></li>
+                            <li class="list-group-item"><a href="create_Account.php" style="color: rgb(165, 59, 59);"><i class="text-small  " id="userIcon"></i>Signup</a></li>
+                        </ul>
+                    </div>
+                   
                 </div>
             
             </div>
-            <div class="menu me-2">
-                <span class="fa fa-bars fs-5" id="icon"></span>
+            <div class="menu me-2" id="menu">
+                <span class="fa fa-bars fs-5"  id="icon"></span>
             </div>
         </nav>
      
     </div>
-    <section id="image_sec">
-        <div class=" container d-flex justify-content-between my-2 p-5">
-        <h1 class="fs-1">SUPPORT</h1>
-        <input type="search" name="serach" id="searchcontact" class="form-serach w-25 fa fa-search" placeholder="Please enter your question">
-        </div>
-        <div class="container">
-        <span class="fs-5 ">How can I help You ?</span>
-        </div>
-        </div>
-        <div class="container d-flex p-2" id="repairContent" style="border-top:1px solid gray; border-bottom:1px solid gray"> 
-            <div class="col-lg-4 col-md-4">
-            <h2>Repair Service</h2>
-            </div>
-            <div class="col-lg-8 col-md-8">
-            <img src="image/repaircontact.jpg" alt="repair" class="w-100">
-            </div>
-        </div>
+    <section>
+        <h1 class="text-center"><?php echo "Welcome"; ?> <span class="text-uppercase"><?php  echo $_SESSION['username']; ?></span></h1>
     </section>
+<section  class=""  id="carouselTab">
+<div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active" data-bs-interval="10000">
+      <img src="image/oneplus-carousel.webp" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item" data-bs-interval="2000">
+      <img src="image/oneplus2.webp" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="image/oneplus-carousel.webp" class="d-block w-100" alt="...">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+</section>
+<section class="container-fluid bg-light text-center p-5" id="videoSec">
+    <h1 >Newly Launch of Apple Iphone 15 Pro <mark class="rounded bg-warning">5G</mark></h1>
+    <div class="container  p-5">
+        <video src="program/video/Introducing iPhone 14 Pro _ Apple_HD.mp4" class=" object-fit-contain " muted autoplay loop  style="border-radius:30px;"></video>
+        <!-- <button class="btn-primary rounded w-25">View</button> -->
+    </div>
+
+    <div class="row d-flex bg-black align-items-center p-5">
+        <hr>
+        <div class="">
+        <h2 class="text-light">Relentless innovation defines who we are OnePlus inspires through innovation.</h2>
+        </div>
+       
+        <div class="col-lg-3 col-sm-2">
+            <h1 class="text-light "><Span class="text-danger">Never Settle <i class="fa fa-arrow-right"></i></Span> Evolve your digital life.</h1>
+        </div>
+        <div class="col-lg-9 col-sm-10 p-5">
+            <img src="image/neversettle.webp" alt="neversettle" class="w-100">
+        </div>
+        <div class=" col-lg-6">
+            <div class="mb-3">
+                <div class="row g-0">
+                <div class="col-md-6">
+                    <img src="image/onepluscardr.webp" alt="" class="img-fluid">
+                </div>
+                <div class="col-md-6 bg-dark align-items-end">
+                    <div class="card-body text-light align-items-end ">
+                    <p class="card-title">OxygenOS 14</p>
+                    <p class="card-text fs-2">Evolved to Exceed</p>
+                    <p class="card-text">The signature OxygenOS experience has evolved. Driven by the next-generation Trinity Engine, innovative features and refreshed design elements, discover the pinnacle of fast and smooth.</p>
+                    </div>
+
+                </div>
+                </div>
+            </div>
+            
+        </div>
+        <div class="col-lg-6">
+        <div class="mb-3">
+                <div class="row g-0 ">
+               
+                <div class="col-md-6 bg-dark align-items-end">
+                    <div class="card-body text-light align-items-end">
+                    <p class="card-title">Capture Every Horizon</p>
+                    <p class="card-text fs-2">2023 OnePlus Photography Awards Winners</p>
+                    <p class="card-text">The 2023 OnePlus Photography Awards is dedicated to honoring everyone to use their phones to create their own works, to capture wonderful moments, and to tell the stories behind the lens.</p>   
+                    </div>
+
+                </div>
+                <div class="col-md-6">
+                    <img src="image/onepluscardl.webp" alt="" class="img-fluid">
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="" id="highlight section">
+<div class="container text-center p-3">
+<h1>Week Highlights</h1>
+<nav class="nav nav-pills nav-fill">
+  <a class="nav-link active" aria-current="page" href="#">Mobiles</a>
+  <a class="nav-link" href="#">Smart Watch</a>
+  <a class="nav-link" href="#">Iphones</a>
+  <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+</nav>
+</div>
+
+</section>
     <div class="container-fluid">
         <div class="container w-75">
             <h2 class="text-gray text-uppercase text-center lh-lg mb-5">Contact Mobile PlatForm Support Team</h2>
@@ -104,7 +188,7 @@
                             <option value="pak">Pakistan</option>
                             <option value="uae">UAE</option>
                         </select>
-                        <button type="button" class="btn btn-danger mb-4" value="Submit">Submit Form</button>
+                        <button type="button" class="btn btn-danger mb-4" id="submitButton">Submit Form</button>
                     </form>
                 </div>
                 <div class=" col-lg-6 col-md-7 col-sm-12">
@@ -180,22 +264,9 @@
             
         </footer>
     </section>
-    <nav class="navbar sticky-bottom bg-primary z-3" id="hiddenFooter">
-        <div class="container">
-           <div>
-            <i class="fa fa-times" aria-hidden="true" id="xFont"></i>
-           </div>
-            <div class="row d-flex flex-row align-items-center ms-auto">
-                <div class=" col-10 col-sm-8 mb-1 ">
-                    <input type="text" name="" id="" placeholder="Email" class="form-control">
-                </div>
-                <div class=" col-10  col-sm-4 mb-1 ">
-                    <button type="submit" class="btn btn-danger w-100">Email</button>
-                </div>
-            </div>
-        </div>
-    </nav>
-    <script type="text/javascript" src="Script/contact1.js" ></script>
-
+    <script type="text/javascript" src="Script/main.js"></script>
+    <script src="Script/mainpage.js"></script>
+    
 </body>
+
 </html>

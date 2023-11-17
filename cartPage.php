@@ -18,6 +18,7 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
 <link rel="stylesheet" href="Styles/product.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/paginationjs/2.6.0/pagination.min.js" >
 </head>
 
 
@@ -35,7 +36,7 @@
                 <div class="collapse navbar-collapse justify-content-center" id="subDiv">
                     <ul class="navbar-nav" id="head_ul">
                         <li class="nav-item me-1 my-3" id="item_li">
-                            <a href="index.php" class="nav-link" id="nava">Home</a>
+                            <a href="home2.php" class="nav-link" id="nava">Home</a>
 
                         </li>
                         <li class="nav-item me-1 my-3">
@@ -124,10 +125,13 @@
                 </div>
                    
             <div class="row" >
-                <div class="col-lg-4 col-sm-3 p-4" id="content-left">
+                <div class="col-lg-4 col-sm-4 p-4" id="content-left">
                 <div id="offerDiv" class="p-3 g-3 mb-3">
                     <div>
-                    <span>Offers</span>
+                        <span class="fw-bold">Categories</span>
+                    </div>
+                    <div>
+                    <span class="fw-bold">Offers</span>
                     </div>
                         <div>
                         <input type="checkbox" value="On Sale">
@@ -139,14 +143,14 @@
                         </div>
                 </div>
                 <div id="stockDiv" class="p-3 mb-2">
-                <span>Stock Availability</span>
+                <span class="fw-bold">Stock Availability</span>
                 <div>
                         <input type="checkbox" value="On Sale" id="Instock">
                         <label for="Instock">In Stock</label>
                         </div>
                 </div>
                 <div id="RamStorageDiv" class="p-3 mb-2 ">
-                <span>RAM and STORAGE</span>
+                <span class="fw-bold">RAM and STORAGE</span>
                     <ul class="list-group">
                         <div>
                         <input type="checkbox" value="On Sale" id='6+128GB'>
@@ -172,7 +176,7 @@
                 </div>
                 <div id="Price Range" class="d-flex row g-3 p-3">
                   <div>
-                  <span>Price Range</span>
+                  <span class="fw-bold">Price Range</span>
                   </div>  
                 <div class="" id="show-range">
                 ₹0 - ₹150,000
